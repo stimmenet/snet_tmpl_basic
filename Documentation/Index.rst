@@ -12,7 +12,7 @@ Extension Name
 =================
 
 :Extension name: SNET Basic Template
-:Extension key: snet_basictemplate
+:Extension key: snet_tmpl_basic
 :Version: 
 :Description: manuals covering TYPO3 extension "SNET Basic Template"
 :Language: en
