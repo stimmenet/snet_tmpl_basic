@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@media screen, projection
+{
+
+	/* Globales Zuruecksetzen der Innen- und Aussenabstaende fuer alle HTML-Elemente */
+	* { margin:0; padding:0; }
+
+	/* Korrektur:Das Zuruecksetzen der Abstaende verursacht zu kleine Selectboxen. */
+	option { padding-left:0.4em; }
+	select { padding:1px; }
+
+	/* Alle Schriftgroessen auf Standardgroesse (16 Pixel) zuruecksetzen */
+	html * { font-size:100.01%; }
+
+	/* Basis-Layout erhaelt Standardschriftgroesse von 12 Pixeln */
+	body {
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:75.00%;
+		background-color:#4d87c7;
+		padding:10px;
+	}
+
+	/* Zentrierung des Layouts in alten IE-versionen */
+	body { text-align: center; }
+	.page_margins { text-align:left; margin: 0 auto; }
+
+
+	/* Layout: Breite, Hintergrund, Rahmen */
+	.page_margins { min-width: 740px; max-width: 80em; background: #fff; }
+	.page { padding: 10px; }
+
+
+	/* Clearfix-Methode zum Clearen der Float-Umgebungen */
+	.clearfix:after {
+		clear:both;
+		content:".";
+		display:block;
+		font-size:0;
+		height:0;
+		visibility:hidden;
+	}
+
+	/* Diese Angabe benoetigt der Safari-Browser zwingend !! */
+	.clearfix { display:block; }
+
+	/* Alternative Methode zum Einschließen von Float-Umgebungen */
+	.floatbox { overflow:hidden; }
+
+	/* IE-Clearing:Benötigt nur der Internet Explorer und über iehacks.css zugeschaltet */
+	#ie_clearing { display:none; }
+
+
+
+	/**
+	* Positionierung der Content Container
+	* |-------------------------------|
+	* | #col1   | #col3     | #col2   |
+	* | 25%     | flexible  | 25%     |
+	* |-------------------------------|
+	*/
+
+	/* #col1 wird zur linken Spalte */
+	#col1 {float:left;width: 25%; }
+	#col1_content {position:relative;padding:0;margin:0;}
+	/* #col2 wird zur rechten Spalte */
+	#col2 {float:right;width: 25%; }
+	#col2_content {position:relative;padding:0;margin:0;}
+	/* #col3 wird zur mittleren Spalte */
+	#col3 {width:auto;margin-left: 25%; margin-right: 25%; }
+	#col3_content {position:relative;padding:0;margin:0;}
+
+
+
+	/* Gestaltung der Hauptelemente des Layouts */
+	#header {
+		background-color: #fff;
+		padding: 45px 2em 1em 20px;
+		position:relative;
+		clear:both;
+	}
+
+	#metanav {
+		color: #aaa;
+		background: transparent;
+		text-align:right;
+	}
+	/* Absolute Positionierung erfolgt nur innerhalb von #header */
+	#header #topnav {
+		position:absolute;
+		top:10px;
+		right:10px;
+	}
+
+
+	#mainnav ul {
+		margin-left: 20px;
+		clear:both;
+	}
+
+	#main {
+		background: #fff;
+		padding:10px;
+		clear:both;
+	}
+
+	#footer {
+		padding:10px;
+		border-top:1px solid #000;
+		clear:both;
+	}
+
+
+	/* Ueberschriften */
+	h1 { font-size:250%; }                       /* 30px */
+	h2 { font-size:200%; }                       /* 24px */
+	h3 { font-size:150%; }                       /* 18px */
+	h4 { font-size:133.33%; }                    /* 16px */
+	h5 { font-size:116.67%; }                    /* 14px */
+	h6 { font-size:116.67%; }                    /* 14px */
+
+	
+	.col { float: left; }
+	.columns-3cols { overflow: auto; margin: 25px 0; }
+	.columns-3cols .col { width: 33%; }
+	
+	.columns-2cols { overflow: auto; margin: 25px 0; }
+	.columns-2cols .col { width: 50%; }
+	
+	
+}

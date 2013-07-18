@@ -1,0 +1,43 @@
+######## Template-Stuff #########
+# Base-Url
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/baseUrl.ts">
+# Config
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/config.ts">
+# Main-Menu, Meta-Menu, ...
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/menu.ts">
+# Title-Tag
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/titleTag.ts">
+# Header-Image
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/headerImage.ts">
+# Footer
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/footer.ts">
+# Alert for old IE
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/oldIE.ts">
+# Lightbox (swipebox)
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/lightbox.ts">
+
+######## Extensions #########
+# realurl
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/realurl/realurl.ts">
+# tt_news
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/tt_news/tt_news.ts">
+# gridelements
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/gridelements/gridelements.ts">
+# dd_googlesitemap
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/dd_googlesitemap/dd_googlesitemap.ts">
+
+# Languages
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/languages.ts">
+
+######## Extensions #########
+# PAGE-Object (typeNum=0)
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/page.0.ts">
+
+[globalVar = LIT:classic = {$snet_tmpl_basic.config.templateEngine}]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/classicTemplate.ts">
+[else]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/fluidTemplate.ts">
+[global]
+
+
+

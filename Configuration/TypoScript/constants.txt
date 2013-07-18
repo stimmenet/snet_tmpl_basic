@@ -1,0 +1,2 @@
+# Vom Integrator editierbare Werte die im Constanteditor dokumentiert sind
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/constants.ts">
