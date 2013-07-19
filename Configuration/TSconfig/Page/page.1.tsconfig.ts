@@ -11,7 +11,6 @@ TCEMAIN.permissions.groupid = 1
 TCEMAIN.permissions.group = show, editcontent, edit, new, delete
 TCEMAIN.permissions.everybody = show
 
-
 ### Überschriften definieren ###
 TCEFORM.tt_content.header_layout {
     altLabels {

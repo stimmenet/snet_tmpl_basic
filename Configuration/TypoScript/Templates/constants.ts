@@ -1,4 +1,5 @@
-#Konstanten die nur über VCS geändert werden.
+### DO NOT OVERWRITE !!! ###
+# changes only allowed in constant editor! #
 
 snet_tmpl_basic {
 
@@ -39,18 +40,6 @@ snet_tmpl_basic {
 
 	# cat=SNET Basic Template/dims/003; type=int+; label= Maximale Headerhöhe
 	dims.headerMaxHeight = 100
-
-	#//TODO: hier die styles.content werte noch dazuschreiben
-	# //TODO: Ist das hier die richtige Stelle dafür?
-    styles.content {
-    	imgtext {
-    		maxW = 1000
-    		maxWInText = 1000
-    		linkWrap.width = 800
-    		linkWrap.lightboxEnabled = 1
-    	}
-    	uploads.filesizeBytesLabels = " | KB| MB| GB"
-    }
 
 	pid {
 		# customsubcategory=pageuid=PID Werte
@@ -135,4 +124,3 @@ snet_tmpl_basic {
 	protocol.prefix.unsecure = http://
 
 }
-

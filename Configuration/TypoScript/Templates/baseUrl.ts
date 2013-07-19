@@ -15,9 +15,9 @@ config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_bas
     config.baseUrl = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}/
     config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}/
 [global]
-[globalString = IENV:HTTP_HOST = {$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}]
-    config.baseUrl = {$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}/
-    config.absRefPrefix = {$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}/
+[globalString = IENV:HTTP_HOST = {$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}] && [globalString = _SERVER|HTTPS=on]
+    config.baseUrl = {$snet_tmpl_basic.protocol.prefix.secure}{$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}/
+    config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.secure}{$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}/
 [global]
 [globalString = IENV:HTTP_HOST = mogg.local]
     config.baseURL = {$snet_tmpl_basic.protocol.prefix.unsecure}mogg.local/
@@ -27,4 +27,11 @@ config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_bas
     config.baseURL = {$snet_tmpl_basic.protocol.prefix.secure}mogg.local/
     config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.secure}mogg.local/
 [global]
-
+[globalString = IENV:HTTP_HOST = mogg2.local]
+    config.baseURL = {$snet_tmpl_basic.protocol.prefix.unsecure}mogg2.local/
+    config.absRefPrefix= {$snet_tmpl_basic.protocol.prefix.unsecure}mogg2.local/
+[global]
+[globalString = IENV:HTTP_HOST = mogg2.local] && [globalString = _SERVER|HTTPS=on]
+    config.baseURL = {$snet_tmpl_basic.protocol.prefix.secure}mogg2.local/
+    config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.secure}mogg2.local/
+[global]

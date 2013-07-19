@@ -30,8 +30,7 @@ plugin.tt_news {
     displayList.subheader_stdWrap.stripHtml = 1
 
     _LOCAL_LANG.de {
-        more = mehr
-        backToList = << zurück
+        more = {$glb.lang.tt_news.more}
+        backToList = {$glb.lang.tt_news.back}
     }
-
 }

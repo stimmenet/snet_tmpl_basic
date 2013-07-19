@@ -20,11 +20,12 @@ page {
 		# //TODO: this namespace is not validated by the TypoScript parser   og:image = http://www.stimme.de/stupl/pics/logo_stimmede_quadratisch.gif
 	}
 
-	includeCSS.styles = {$snet_tmpl_basic.cssRootPath}/styles.css
+	includeCSS.styles = {$snet_tmpl_basic.cssRootPath}/Pages/styles_basic.css
 
 	javascriptLibs {
 		jQuery = 1
 		jQuery {
+			//TODO: fix-version not latest
 			version = latest
 			source = google
 			noConflict = 0
@@ -33,9 +34,9 @@ page {
 	}
 
 	includeJSlibs {
-		jQuery-easing = {$snet_tmpl_basic.jsRootPath}/jquery.easing-1.3.js
-		jQuery-ui = //ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js
-		jQuery-ui.external = 1
+		#jQuery-easing = {$snet_tmpl_basic.jsRootPath}/jquery.easing-1.3.js
+		#jQuery-ui = //ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js
+		#jQuery-ui.external = 1
 	}
 
 	### Favicon setzen ###

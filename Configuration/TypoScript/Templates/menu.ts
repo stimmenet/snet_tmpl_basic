@@ -252,7 +252,7 @@ lib.menuBreadcrumb {
     #special.range = -2|-2
 
     stdWrap.prepend = TEXT
-    stdWrap.prepend.value = Sie sind hier:&nbsp;
+    stdWrap.prepend.value = {$glb.lang.menuBreadcrumb.prepend}
 
     1 = TMENU
     1.target = _top
@@ -261,7 +261,7 @@ lib.menuBreadcrumb {
     1.NO {
         stdWrap.htmlSpecialChars = 1
         ATagTitle.field = subtitle//title
-        ATagTitle.stdWrap.noTrimWrap = |Zurück zu: ||
+        ATagTitle.stdWrap.noTrimWrap = |{$glb.lang.menuBreadcrumb.ATagTitle} ||
 
         # Layout 1: Seite 1 > Seite 2 > Seite 3
         linkWrap = |&nbsp;>&nbsp;|*||*| |
