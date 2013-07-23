@@ -3,9 +3,9 @@ glb.lang {
 	menuBreadcrumb.prepend = Sie sind hier:&nbsp;
 	menuBreadcrumb.ATagTitle = Zurück zu:
 
-	# tt_news
-	tt_news.more = mehr
-	tt_news.backToList = << zurück
+	# news
+	news.rss.description = Aktuelle Nachrichten
+	news.rss.category = Diverses
 }
 
 [globalVar = GP:L=1]
@@ -14,8 +14,8 @@ glb.lang {
 		menuBreadcrumb.prepend = You are here:&nbsp;
 		menuBreadcrumb.ATagTitle = Back to:
 
-		# tt_news
-		tt_news.more = more
-		tt_news.backToList = << back
+		# news
+		news.rss.description = News
+		news.rss.category = Misc
 	}
 [global]

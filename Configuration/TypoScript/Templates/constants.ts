@@ -55,12 +55,16 @@ snet_tmpl_basic {
 		metaMenuStartPid = 3
 
 		# customsubcategory=pageuid=PID Werte
-		# cat=SNET Basic Template/pageuid/0010; type=int+; label= News-Singleview
-		newsSinglePid = 13
-
-		# customsubcategory=pageuid=PID Werte
 		# cat=SNET Basic Template/pageuid/0010; type=int+; label= News-Storage
 		newsStoragePid = 11
+
+		# customsubcategory=pageuid=PID Werte
+		# cat=SNET Basic Template/pageuid/0010; type=int+; label= News-Listview
+		newsListPid = 12
+
+		# customsubcategory=pageuid=PID Werte
+		# cat=SNET Basic Template/pageuid/0010; type=int+; label= News-Singleview
+		newsSinglePid = 13
 
 		# customsubcategory=pageuid=PID Werte
 		# cat=SNET Basic Template/pageuid/0010; type=int+; label= Funktionsseite Footer

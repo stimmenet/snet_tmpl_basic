@@ -21,14 +21,17 @@
 ######## Extensions #########
 # realurl
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/realurl/realurl.ts">
-# tt_news
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/tt_news/tt_news.ts">
+# news
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/news/news.ts">
 # gridelements
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/gridelements/gridelements.ts">
 # dd_googlesitemap
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/dd_googlesitemap/dd_googlesitemap.ts">
 
-######## Extensions #########
+######## Translations #########
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/languages.ts">
+
+######## Pages #########
 # PAGE-Object (typeNum=0)
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/page.typeNum.0.ts">
 
