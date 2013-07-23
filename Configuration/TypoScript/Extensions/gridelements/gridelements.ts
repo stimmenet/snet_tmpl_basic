@@ -1,3 +1,5 @@
+tt_content.gridelements_pi1.10 = < lib.stdheader
+
 tt_content.gridelements_pi1.20.10.setup {
 	1 < lib.gridelements.defaultGridSetup
 	1 {
@@ -32,5 +34,3 @@ tt_content.gridelements_pi1.20.10.setup {
 		wrap = <div class="columns-3cols">|</div>
 	}
 }
-
-tt_content.gridelements_pi1.10 = < lib.stdheader

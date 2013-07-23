@@ -13,21 +13,21 @@ TCEMAIN.permissions.everybody = show
 
 ### Überschriften definieren ###
 TCEFORM.tt_content.header_layout {
-    altLabels {
-        0 = h1 - Seitenüberschrift
-        1 =
-        2 = h2 - Themenüberschrift
-        3 = h3 - Absatzüberschrift
-        4 =
-        5 =
-       }
-   removeItems = 1,4,5
+	altLabels {
+		0 = h1 - Seitenüberschrift
+		1 =
+		2 = h2 - Themenüberschrift
+		3 = h3 - Absatzüberschrift
+		4 =
+		5 =
+	}
+	removeItems = 1,4,5
 }
 
 ### Anpassung Dateiverweise ###
 TCEFORM.tt_content.layout.types.uploads {
 	removeItems = 3
-    	altLabels.0 = Normal
+	altLabels.0 = Normal
 	altLabels.1 = Icon
 	altLabels.2 = Vorschau
 }
