@@ -271,3 +271,63 @@ lib.menuBreadcrumb {
         doNotLinkIt = |*| 0 |*| 1
     }
 }
+
+
+### Sprachen ###
+lib.language = HMENU
+lib.language {
+  special = language
+  # Reihenfolge und Auswahl der Sprachen im Menü
+  special.value = 0,1
+  special.normalWhenNoLanguage = 0
+  wrap = <div id="language">{$glb.lang.LanguageLabel}<ul id="language_content">|</ul></div>
+  1 = TMENU
+  1 {
+  noBlur = 1
+  # Standard Sprachen
+  NO = 1
+  NO {
+    linkWrap (
+      <li><img src="fileadmin/default/images/layout/flags/de.gif" title="de" alt="de">&nbsp;&nbsp;|</li> ||
+      <li><img src="fileadmin/default/images/layout/flags/gb.gif" title="en" alt="en">&nbsp;&nbsp;|</li>
+    )
+    # Standard-Titel für den Link wäre Seitenttitel
+    # => anderer Text als Link-Text (Optionsschift)
+    stdWrap.override = Deutsch || English
+    # Standardmäßige Verlinkung des Menüs ausschalten
+    # Da diese sonstige GET-Parameter nicht enthält
+    doNotLinkIt = 1
+    # Nun wird der Link mit den aktuellen GET-Parametern neu aufgebaut
+    stdWrap.typolink.parameter.data = page:uid
+    stdWrap.typolink.additionalParams = &L=0 || &L=1
+    stdWrap.typolink.addQueryString = 1
+    stdWrap.typolink.addQueryString.exclude = L,id,cHash,no_cache
+    stdWrap.typolink.addQueryString.method = GET
+    stdWrap.typolink.useCacheHash = 1
+    stdWrap.typolink.no_cache = 0
+  }
+  # Aktive Sprache
+  ACT < .NO
+  ACT.linkWrap (
+      <li class="active"><img src="fileadmin/default/images/layout/flags/de.gif" title="de" alt="de">&nbsp;&nbsp;|</li> ||
+      <li class="active"><img src="fileadmin/default/images/layout/flags/gb.gif" title="en" alt="en">&nbsp;&nbsp;|</li>
+    )
+  # NO + Übersetzung nicht vorhanden
+  USERDEF1 = 1
+  USERDEF1.allWrap (
+      <li class="noTranslation"><img src="fileadmin/default/images/layout/flags/de_grey.gif" title="de" alt="de">&nbsp;&nbsp;Deutsch</li> ||
+      <li class="noTranslation"><img src="fileadmin/default/images/layout/flags/gb_grey.gif" title="en" alt="en">&nbsp;&nbsp;English</li>
+    )
+  USERDEF1.doNotLinkIt = 1
+  USERDEF1.doNotShowLink = 1  
+
+  # ACT + Übersetzung nicht vorhanden
+  USERDEF2 = 1
+  USERDEF2.allWrap (
+      <li class="noTranslation"><img src="fileadmin/default/images/layout/flags/de_grey.gif" title="de" alt="de">&nbsp;&nbsp;Deutsch</li> ||
+      <li class="noTranslation"><img src="fileadmin/default/images/layout/flags/gb_grey.gif" title="en" alt="en">&nbsp;&nbsp;English</li>
+    )
+  USERDEF2.doNotLinkIt = 1
+  USERDEF2.doNotShowLink = 1  
+  }
+}

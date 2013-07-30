@@ -46,9 +46,7 @@ page {
 		marks.IE6 < lib.oldIE
 
 		### Sprachauswahl ###
-		# //TODO: Sprachumschalter über TypoScript realisieren
-		#marks.sprachen = PHP_SCRIPT
-		#marks.sprachen.file = fileadmin/{$snet_tmpl_basic.fileadminFolder}/scripts/theLanguageMenu.php
+		#marks.sprachen < lib.language
 
 		### Suchbox ###
 		# //TODO: Diese Extension ist nicht installiert
