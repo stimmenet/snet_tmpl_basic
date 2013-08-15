@@ -127,5 +127,27 @@
 	.columns-2cols { overflow: auto; margin: 25px 0; }
 	.columns-2cols .col { width: 50%; }
 	
+/* Kontaktformular */
+.csc-mailform ol { list-style-type: none; }
+.csc-mailform .csc-form-element-radio input,
+.csc-mailform .csc-form-element-checkbox input { float: left; margin-top: 3px; }
+.csc-mailform .csc-form-element-radio label, 
+.csc-mailform .csc-form-element-checkbox label { float: right; width: 540px; margin-right: 0; }
+
+.csc-mailform .csc-form-element { margin-bottom: 6px; }
+.csc-mailform .csc-form-element label { width: 150px; }
+.csc-mailform label em, .csc-mailform legend em { display: inline; padding-left: 3px; color: #CC6600; font-weight: bold; }
+.csc-mailform .csc-form-element input[type='text'] { padding: 2px 4px; border: 1px solid #abadb3; }
+
+.csc-mailform .csc-form-element-radiogroup legend { width: 220px; color: #666; }
+.csc-mailform .csc-form-element-radiogroup ol { padding: 0; margin: 0; position: static; }
+.csc-mailform .csc-form-element-radiogroup li { padding: 0; }
+.csc-mailform .csc-form-element-radiogroup label {  }
+
+.csc-mailform .csc-form-5 { display: none; }
+
+.csc-mailform .csc-form-element-submit input { display: block; margin: 15px 0; background-color: #fff; border: 1px solid #ABADB3; padding: 5px 25px; font-weight: bold; cursor: pointer; }
+
+	
 	
 }

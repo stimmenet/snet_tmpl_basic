@@ -3,3 +3,6 @@
 
 # Languages
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/languages.constants.ts">
+
+# Extensions
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/wt_spamshield/wt_spamshield.constants.ts">
