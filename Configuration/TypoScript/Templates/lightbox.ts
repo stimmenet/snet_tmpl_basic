@@ -10,12 +10,12 @@ tt_content.image.20.1.imageLinkWrap.width =
 
 page.includeJS {
 	# Lightbox plugin
-	lightbox = {$snet_tmpl_basic.jsRootPath}/Swipebox/jquery.swipebox.min.js
+	lightbox = {$snet_tmpl_basic.jsRootPath}/swipebox/jquery.swipebox.min.js
 	# Custom javascript for activation and configuration
-	enable_lightbox = {$snet_tmpl_basic.jsRootPath}/Swipebox/enable_swipebox.js
+	enable_lightbox = {$snet_tmpl_basic.jsRootPath}/swipebox/enable_swipebox.js
 }
 
 page.includeCSS {
 	# CSS for Lightbox
-	lightbox = {$snet_tmpl_basic.cssRootPath}/Swipebox/swipebox.css
+	lightbox = {$snet_tmpl_basic.cssRootPath}/swipebox/swipebox.css
 }
