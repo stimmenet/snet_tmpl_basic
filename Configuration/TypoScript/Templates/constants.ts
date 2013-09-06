@@ -110,7 +110,7 @@ snet_tmpl_basic {
 	layoutRootPath = EXT:snet_tmpl_basic/Resources/Private/Layouts
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den Partials
-	partialPath = EXT:snet_tmpl_basic/Resources/Private/Partials
+	partialRootPath = EXT:snet_tmpl_basic/Resources/Private/Partials
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den Stylesheets
 	cssRootPath = EXT:snet_tmpl_basic/Resources/Public/Styles
