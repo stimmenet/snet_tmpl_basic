@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
-@media screen, projection
-{
+@media screen, projection {
 
 	/* Globales Zuruecksetzen der Innen- und Aussenabstaende fuer alle HTML-Elemente */
 	* { margin:0; padding:0; }
@@ -147,6 +146,8 @@
 .csc-mailform .csc-form-5 { display: none; }
 
 .csc-mailform .csc-form-element-submit input { display: block; margin: 15px 0; background-color: #fff; border: 1px solid #ABADB3; padding: 5px 25px; font-weight: bold; cursor: pointer; }
+
+input[name*='schpaem'] { display: none; }
 
 	
 	
