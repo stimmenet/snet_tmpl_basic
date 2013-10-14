@@ -4,6 +4,12 @@ RTE.default {
 	gzipFileCache = 1
 }
 
+### Standartsprache ###
+mod.SHARED {
+	defaultLanguageFlag = de
+	defaultLanguageLabel = Deutsch
+}
+
 ### Neue Seiten Benutzergruppe 1 (All BE Users) zuweisen ###
 TCEMAIN.permissions.groupid = 1
 

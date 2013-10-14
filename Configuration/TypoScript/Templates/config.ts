@@ -88,6 +88,11 @@ config {
 	### ClassicTemplate internal Target. Uses by typolink if no target is set ###
 	###########################################
 	intTarget = _self
+	
+	### Sprache ###
+	###############
+	sys_language_mode = strict
+	
 }
 
 ### XHTML Prolog   ###
