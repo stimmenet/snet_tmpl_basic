@@ -119,10 +119,10 @@ snet_tmpl_basic {
 	imgRootPath = EXT:snet_tmpl_basic/Resources/Public/Images
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den JS-Dateien
-	jsRootPath = EXT:snet_tmpl_basic/Resources/Public/Scripts/js
+	jsRootPath = EXT:snet_tmpl_basic/Resources/Public/Scripts/JS
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den PHP-Dateien
-	phpRootPath = EXT:snet_tmpl_basic/Resources/Public/Scripts/php
+	phpRootPath = EXT:snet_tmpl_basic/Resources/Public/Scripts/PHP
 
 	protocol.prefix.secure = https://
 	protocol.prefix.unsecure = http://
