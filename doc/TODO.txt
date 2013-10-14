@@ -1,9 +1,0 @@
-//TODO:
-
-- TestCases ausdenken.
-- merging und compression für css aktivieren
-- Abhänigkeiten von installierten Ext. in ext_emconf aufnehmen?
-- NEWS statt tt_news evaluieren.
-- Alternative für sr_feuser_register suchen und einbinden - datamints_feuser?
-- refactoring: TS-Config -> TSconfig
-- killswitch um alternateBaseUrl einstellebar? Ganze Domain alternativ aufnehemen und diese verwenden wenn domain von p1234.mittwaldserver.info abweicht.
