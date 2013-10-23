@@ -1,13 +1,19 @@
 plugin.tx_news {
 
 	persistence.storagePid = {$snet_tmpl_basic.pid.newsStoragePid}
+	#mvc.callDefaultActionIfActionCantBeResolved = 1
 
 	settings {
 		facebookLocale < config.locale_all
 		googlePlusLocale < config.language
 
-		defaultPid = {$snet_tmpl_basic.pid.newsListPid}
-		defaultDetailPid = {$snet_tmpl_basic.pid.newsSinglePid}
+		defaultPid = {$snet_tmpl_voba.pid.newsListPid}
+		detailPid = {$snet_tmpl_voba.pid.newsSinglePid}
+		overrideFlexformSettingsIfEmpty := addToList(detailPid)
+		startingpoint = {$snet_tmpl_voba.pid.newsStoragePid}
+		overrideFlexformSettingsIfEmpty := addToList(startingpoint)
+
+		orderByAllowed = author,uid,title,teaser,author,tstamp,crdate,datetime,categories,title
 		cropMaxCharacters = 270
 
 		list {
