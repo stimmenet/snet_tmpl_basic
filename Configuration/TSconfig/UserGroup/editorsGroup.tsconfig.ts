@@ -9,6 +9,9 @@ options.RTEkeyList=class,formatblock,bold,italic,orderedlist,unorderedlist,outde
 ### Feld "Alias" ausblenden ###
 page.TCEFORM.pages.alias.disabled = 1
 
+### Feld Subtitle einblenden###
+page.TCEFORM.pages.subtitle.enabled = 1
+
 ### Feld "Inhalt dieser Seite anzeigen" ausblenden ###
 page.TCEFORM.pages.content_from_pid.disabled = 1
 
@@ -23,5 +26,6 @@ mod.web_layout.menu.function {
 	##Seiteninformationen
 	3 = 0
 }
+
 
 
