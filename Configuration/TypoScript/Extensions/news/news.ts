@@ -7,10 +7,10 @@ plugin.tx_news {
 		facebookLocale < config.locale_all
 		googlePlusLocale < config.language
 
-		defaultPid = {$snet_tmpl_voba.pid.newsListPid}
-		detailPid = {$snet_tmpl_voba.pid.newsSinglePid}
+		defaultPid = {$snet_tmpl_basic.pid.newsListPid}
+		detailPid = {$snet_tmpl_basic.pid.newsSinglePid}
 		overrideFlexformSettingsIfEmpty := addToList(detailPid)
-		startingpoint = {$snet_tmpl_voba.pid.newsStoragePid}
+		startingpoint = {$snet_tmpl_basic.pid.newsStoragePid}
 		overrideFlexformSettingsIfEmpty := addToList(startingpoint)
 
 		orderByAllowed = author,uid,title,teaser,author,tstamp,crdate,datetime,categories,title
