@@ -6,9 +6,6 @@ snet_tmpl_basic {
 	# customsubcategory=basic=Basic Settings
 	config  {
 
-		# cat=SNET Basic Template/basic/000; type=options[fluid, classic]; label= Template Engine: Come to the fluid site - we have cookies!
-		templateEngine = classic
-
 		# cat=SNET Basic Template/basic/001; type=string; label= SiteName
 		siteName = SNET TYPO3 Mogg
 

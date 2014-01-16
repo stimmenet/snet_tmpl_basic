@@ -35,11 +35,7 @@
 # PAGE-Object (typeNum=0)
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/page.typeNum.0.ts">
 
-[globalVar = LIT:classic = {$snet_tmpl_basic.config.templateEngine}]
-	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/classicTemplate.ts">
-[else]
-	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/fluidTemplate.ts">
-[global]
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/fluidTemplate.ts">
 
-# conditions
+######## Conditions ########
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/conditions.ts">
