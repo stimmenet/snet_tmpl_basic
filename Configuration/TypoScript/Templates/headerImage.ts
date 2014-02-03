@@ -26,6 +26,7 @@ lib.headerImage {
 		import = uploads/media/
 		import.data = levelmedia:-1, slide
 		import.listNum = 0
+		treatIdAsReference = 1
 		width = {$snet_tmpl_basic.dims.headerMaxWidth}
 		height = {$snet_tmpl_basic.dims.headerMaxHeight}
 	}
