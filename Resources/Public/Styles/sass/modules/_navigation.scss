@@ -1,0 +1,84 @@
+
+// /*
+// ******************************
+//  | - Navigation Module
+// ******************************
+// */
+
+
+// /*
+//  | - - Global Navigation
+// */
+
+.nav-list {
+    list-style-type:none;
+    overflow:auto;
+    padding:0;
+    margin:0;
+}
+
+.nav-list-item {
+    display:block;
+    float:left;
+
+    &:before {
+        content:'|';
+        margin:0 10px;
+    }
+
+    &:first-child:before {
+        display:none;
+    }
+}
+
+
+// /*
+//  | - - Meta Navigation
+// */
+
+.nav--meta {
+    position:absolute;
+    right:$width-margin;
+    top:$width-margin;
+}
+
+// /*
+//  | - - Main Navigation
+// */
+
+.nav--main {
+    background:$color-main;
+}
+
+.nav--main .nav-list-item {
+    &:before {
+        display:none;
+    }
+}
+
+.nav--main .nav-list-item a {
+    display:block;
+    padding:$width-margin $width-margin - 5px $width-margin - 5px $width-margin - 5px;
+    border:none;
+    text-decoration:none;
+    border-bottom:5px solid transparent;
+    margin:0 5px;
+
+    &:hover {
+        color:$color-minor;
+        border-bottom-color:$color-minor;
+    }
+}
+
+.nav--main .nav-list-item--cur a {
+    border-bottom-color:$color-highlight;
+}
+
+
+// /*
+//  | - - Breadcrumb Navigation
+// */
+
+.nav--breadcrumb {
+    margin:$width-margin 0;
+}

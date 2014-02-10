@@ -1,0 +1,41 @@
+
+/*
+******************************
+ | - Basic Project Styles
+******************************
+*/
+
+html {
+    font-size:$fontsize-base;
+    color:$color-main;
+    background:$color-minor;
+    line-height:1.5;
+}
+
+body {
+    font-family:$font;
+}
+
+p {
+    margin:1em 0;
+}
+
+a {
+    color:$color-highlight;
+    text-decoration:none;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:$font-highlight;
+    font-weight:bold;
+    @include font-size($fontsize-l, $fontsize-base);
+    text-transform:uppercase;
+}

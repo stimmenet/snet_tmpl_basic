@@ -1,0 +1,16 @@
+{
+  "name": "snet_feBaseline",
+  "version": "0.0.1",
+  "description": "Project for creating a new productive frontend baseline.",
+  "repository": {
+    "type": "git",
+    "url": "git@biergit.intern.stimme.net:snet_feBaseline.git"
+  },
+  "author": "Sonja Zintz, Daniel Hirth",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-sass": "~0.5.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-cssmin": "~0.7.0"
+  }
+}

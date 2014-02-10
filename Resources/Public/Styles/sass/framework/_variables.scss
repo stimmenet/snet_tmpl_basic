@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+// /*
+//  | - - Color Values
+// */
+
+$color-main:#333;
+$color-minor:#fff;
+$color-highlight:#0589c3;
+
+// /*
+//  | - - Font Sizes
+// */
+
+$fontsize-base:14px;
+
+$fontsize:1rem;
+$fontsize-s:0.857rem;
+$fontsize-l:1.143rem;
+$fontsize-xl:1.5rem;
+
+// /*
+//  | - - Fonts
+// */
+
+$font:'Open Sans', Tahoma, sans-serif;
+$font-highlight: $font;
+
+
+// /*
+//  | - - Width Variables
+// */
+
+$width-margin: 15px;
+$width-total: 960px;
+$width-content-main: 615px;
+$width-content-aside: 300px;

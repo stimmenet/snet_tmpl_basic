@@ -1,0 +1,6 @@
+@mixin font-size($sizeValue: 1, $baseValue: 16) {
+    $sizeVal: parseInt($sizeValue);
+    $baseVal: parseInt($baseValue);
+    font-size: round($sizeVal * $baseVal) + px;
+    font-size: $sizeVal + rem;
+}

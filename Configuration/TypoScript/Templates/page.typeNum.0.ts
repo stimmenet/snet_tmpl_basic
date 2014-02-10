@@ -20,7 +20,7 @@ page {
 		# //TODO: this namespace is not validated by the TypoScript parser   og:image = http://www.stimme.de/stupl/pics/logo_stimmede_quadratisch.gif
 	}
 
-	includeCSS.styles = {$snet_tmpl_basic.cssRootPath}/Pages/styles_basic.css
+	includeCSS.styles = {$snet_tmpl_basic.cssRootPath}/css/main.css
 
 	javascriptLibs {
 		jQuery = 1
@@ -38,14 +38,14 @@ page {
 		#jQuery-ui = //ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js
 		#jQuery-ui.external = 1
 	}
-	
+
 	includeJS {
 		html5shim = <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	}
 
 	### Favicon setzen ###
 	shortcutIcon = {$snet_tmpl_basic.imgRootPath}/favicon.ico
-	
+
 	### Viewport ###
 	headerData.12 = TEXT
 	headerData.12.value = <meta name="viewport" content="width=device-width, initial-scale=1.0" />

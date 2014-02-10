@@ -13,14 +13,14 @@ lib.menuMain {
     1.noBlur = 1
     1 {
         #expAll = 1
-        wrap = <ul class="navlist navlist-level1">|</ul>
+        wrap = <ul class="nav-list nav-list--level1">|</ul>
         NO = 1
         NO {
             ATagParams = class="no"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level1 no no_first">| |*| <li id="item_{elementUid}" class=" navlist-item navlist-item-level1 no">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 no no_last">|
-            allWrap = <li class="navlist-item navlist-item-level1 no no_first">| |*| <li class=" navlist-item navlist-item-level1 no">| |*| <li class="navlist-item navlist-item-level1 no no_last">|
+            #allWrap = <li id="item_{elementUid}" class="nav-list-item no no_first">| |*| <li id="item_{elementUid}" class=" nav-list-item no">| |*| <li id="item_{elementUid}" class="nav-list-item no no_last">|
+            allWrap = <li class="nav-list-item">|
             wrapItemAndSub = |</li>
         }
         ACT = 1
@@ -28,8 +28,8 @@ lib.menuMain {
             ATagParams = class="act"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level1 act act_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 act">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 act act_last">|
-            allWrap = <li class="navlist-item navlist-item-level1 act act_first">| |*| <li class="navlist-item navlist-item-level1 act">| |*| <li class="navlist-item navlist-item-level1 act act_last">|
+            #allWrap = <li id="item_{elementUid}" class="nav-list-item act act_first">| |*| <li id="item_{elementUid}" class="nav-list-item act">| |*| <li id="item_{elementUid}" class="nav-list-item act act_last">|
+            allWrap = <li class="nav-list-item nav-list-item--act">|
             wrapItemAndSub = |</li>
         }
         CUR = 1
@@ -37,8 +37,8 @@ lib.menuMain {
             ATagParams = class="cur"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level1 cur cur_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 cur">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 cur cur_last">|
-            allWrap = <li class="navlist-item navlist-item-level1 cur cur_first">| |*| <li class="navlist-item navlist-item-level1 cur">| |*| <li class="navlist-item navlist-item-level1 cur cur_last">|
+            #allWrap = <li id="item_{elementUid}" class="nav-list-item cur cur_first">| |*| <li id="item_{elementUid}" class="nav-list-item cur">| |*| <li id="item_{elementUid}" class="nav-list-item cur cur_last">|
+            allWrap = <li class="nav-list-item nav-list-item--cur">|
             wrapItemAndSub = |</li>
         }
     }
@@ -60,14 +60,14 @@ lib.menuSub {
     1.noBlur = 1
     1 {
         #expAll = 1
-        wrap = <ul class="navlist navlist-level1">|</ul>
+        wrap = <ul class="nav-list nav-list--level1">|</ul>
         NO = 1
         NO {
             ATagParams = class="no"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level1 no no_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 no">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 no no_last">|
-            allWrap = <li class="navlist-item navlist-item-level1 no no_first">| |*| <li class="navlist-item navlist-item-level1 no">| |*| <li class="navlist-item navlist-item-level1 no no_last">|
+            #allWrap = <li id="item_{elementUid}" class="nav-list-item no no_first">| |*| <li id="item_{elementUid}" class="nav-list-item no">| |*| <li id="item_{elementUid}" class="nav-list-item no no_last">|
+            allWrap = <li class="nav-list-item">|
             wrapItemAndSub = |</li>
         }
         ACT = 1
@@ -75,8 +75,8 @@ lib.menuSub {
             ATagParams = class="act"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level1 act act_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 act">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 act act_last">|
-            allWrap = <li class="navlist-item navlist-item-level1 act act_first">| |*| <li class="navlist-item navlist-item-level1 act">| |*| <li class="navlist-item navlist-item-level1 act act_last">|
+            #allWrap = <li id="item_{elementUid}" class="nav-list-item act act_first">| |*| <li id="item_{elementUid}" class="nav-list-item act">| |*| <li id="item_{elementUid}" class="nav-list-item act act_last">|
+            allWrap = <li class="nav-list-item nav-list-item--act">|
             wrapItemAndSub = |</li>
         }
         CUR = 1
@@ -84,8 +84,8 @@ lib.menuSub {
             ATagParams = class="cur"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level1 cur cur_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 cur">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 cur cur_last">|
-            allWrap = <li class="navlist-item navlist-item-level1 cur cur_first">| |*| <li class="navlist-item navlist-item-level1 cur">| |*| <li class="navlist-item navlist-item-level1 cur cur_last">|
+            #allWrap = <li id="item_{elementUid}" class="nav-list-item cur cur_first">| |*| <li id="item_{elementUid}" class="nav-list-item cur">| |*| <li id="item_{elementUid}" class="nav-list-item cur cur_last">|
+            allWrap = <li class="nav-list-item nav-list-item--cur">|
             wrapItemAndSub = |</li>
         }
     }
@@ -95,34 +95,7 @@ lib.menuSub {
     2.noBlur = 1
     2 {
         #expAll = 1
-        wrap = <ul class="navlist navlist-level2">|</ul>
-        NO = 1
-        NO {
-            ATagParams = class="no"
-            ATagTitle.field = subtitle//title
-            #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level2 no1 no_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level2 no1">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level2 no1 no_last">|
-            allWrap = <li class="navlist-item navlist-item-level2 no1 no_first">| |*| <li class="navlist-item navlist-item-level2 no1">| |*| <li class="navlist-item navlist-item-level2 no1 no_last">|
-            wrapItemAndSub = |</li>
-        }
-        ACT = 1
-        ACT {
-            ATagParams = class="act"
-            ATagTitle.field = subtitle//title
-            #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level2 act1 act_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level2 act1">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level2 act1 act_last">|
-            allWrap = <li class="navlist-item navlist-item-level2 act1 act_first">| |*| <li class="navlist-item navlist-item-level2 act1">| |*| <li class="navlist-item navlist-item-level2 act1 act_last">|
-            wrapItemAndSub = |</li>
-        }
-        CUR = 1
-        CUR {
-            ATagParams = class="cur"
-            ATagTitle.field = subtitle//title
-            #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level2 cur1 cur_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level2 cur1">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level2 cur1 cur_last">|
-            allWrap = <li class="navlist-item navlist-item-level2 cur1 cur_first">| |*| <li class="navlist-item navlist-item-level2 cur1">| |*| <li class="navlist-item navlist-item-level2 cur1 cur_last">|
-            wrapItemAndSub = |</li>
-        }
+        wrap = <ul class="nav-list nav-list--level2">|</ul>
     }
 
     3 < .1
@@ -130,34 +103,7 @@ lib.menuSub {
     3.noBlur = 1
     3 {
         #expAll = 1
-        wrap = <ul class="navlist navlist-level3">|</ul>
-        NO = 1
-        NO {
-            ATagParams = class="no"
-            ATagTitle.field = subtitle//title
-            #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level3 no2 no_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level3 no2">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level3 no2 no_last">|
-            allWrap = <li class="navlist-item navlist-item-level3 no2 no_first">| |*| <li class="navlist-item navlist-item-level3 no2">| |*| <li class="navlist-item navlist-item-level3 no2 no_last">|
-            wrapItemAndSub = |</li>
-        }
-        ACT = 1
-        ACT {
-            ATagParams = class="act"
-            ATagTitle.field = subtitle//title
-            #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level3 act2 act_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level3 act2">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level3 act2 act_last">|
-            allWrap = <li class="navlist-item navlist-item-level3 act2 act_first">| |*| <li class="navlist-item navlist-item-level3 act2">| |*| <li class="navlist-item navlist-item-level3 act2 act_last">|
-            wrapItemAndSub = |</li>
-        }
-        CUR = 1
-        CUR {
-            ATagParams = class="cur"
-            ATagTitle.field = subtitle//title
-            #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level3 cur2 cur_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level3 cur2">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level3 cur2 cur_last">|
-            allWrap = <li class="navlist-item navlist-item-level3 cur2 cur_first">| |*| <li class="navlist-item navlist-item-level3 cur2">| |*| <li class="navlist-item navlist-item-level3 cur2 cur_last">|
-            wrapItemAndSub = |</li>
-        }
+        wrap = <ul class="nav-list nav-list--level3">|</ul>
     }
 
     4 < .1
@@ -165,34 +111,7 @@ lib.menuSub {
     4.noBlur = 1
     4 {
         #expAll = 1
-        wrap = <ul class="navlist navlist-level4">|</ul>
-        NO = 1
-        NO {
-            ATagParams = class="no"
-            ATagTitle.field = subtitle//title
-            #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level4 no3 no_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level4 no3">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level4 no3 no_last">|
-            allWrap = <li class="navlist-item navlist-item-level4 no3 no_first">| |*| <li class="navlist-item navlist-item-level4 no3">| |*| <li class="navlist-item navlist-item-level4 no3 no_last">|
-            wrapItemAndSub = |</li>
-        }
-        ACT = 1
-        ACT {
-            ATagParams = class="act"
-            ATagTitle.field = subtitle//title
-            #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level4 act3 act_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level4 act3">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level4 act3 act_last">|
-            allWrap = <li class="navlist-item navlist-item-level4 act3 act_first">| |*| <li class="navlist-item navlist-item-level4 act3">| |*| <li class="navlist-item navlist-item-level4 act3 act_last">|
-            wrapItemAndSub = |</li>
-        }
-        CUR = 1
-        CUR {
-            ATagParams = class="cur"
-            ATagTitle.field = subtitle//title
-            #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level4 cur3 cur_first">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level4 cur3">| |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level4 cur3 cur_last">|
-            allWrap = <li class="navlist-item navlist-item-level4 cur3 cur_first">| |*| <li class="navlist-item navlist-item-level4 cur3">| |*| <li class="navlist-item navlist-item-level4 cur3 cur_last">|
-            wrapItemAndSub = |</li>
-        }
+        wrap = <ul class="nav-list nav-list--level4">|</ul>
     }
 }
 
@@ -211,14 +130,14 @@ lib.menuMeta {
     1.noBlur = 1
     1 {
         #expAll = 1
-        wrap = <ul class="navlist navlist-level1">|</ul>
+        wrap = <ul class="nav-list nav-list--level1">|</ul>
         NO = 1
         NO {
             ATagParams = class="no"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level1 no no_first">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 no">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 no no_last">|
-            allWrap = <li class="navlist-item navlist-item-level1 no no_first">|<span>&Iota;</span> |*| <li class="navlist-item navlist-item-level1 no">|<span>&Iota;</span> |*| <li class="navlist-item navlist-item-level1 no no_last">|
+            #allWrap = <li id="item_{elementUid}" class="nav-list-item no no_first">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="nav-list-item no">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="nav-list-item no no_last">|
+            allWrap = <li class="nav-list-item">|
             wrapItemAndSub = |</li>
         }
         ACT = 1
@@ -226,8 +145,8 @@ lib.menuMeta {
             ATagParams = class="act"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level1 act act_first">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 act">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 act act_last">|
-            allWrap = <li class="navlist-item navlist-item-level1 act act_first">|<span>&Iota;</span> |*| <li class="navlist-item navlist-item-level1 act">|<span>&Iota;</span> |*| <li class="navlist-item navlist-item-level1 act act_last">|
+            #allWrap = <li id="item_{elementUid}" class="nav-list-item act act_first">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="nav-list-item act">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="nav-list-item act act_last">|
+            allWrap = <li class="nav-list-item nav-list-item--act">|
             wrapItemAndSub = |</li>
         }
         CUR = 1
@@ -235,8 +154,8 @@ lib.menuMeta {
             ATagParams = class="cur"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="navlist-item navlist-item-level1 cur cur_first">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 cur">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="navlist-item navlist-item-level1 cur cur_last">|
-            allWrap = <li class="navlist-item navlist-item-level1 cur cur_first">|<span>&Iota;</span> |*| <li class="navlist-item navlist-item-level1 cur">|<span>&Iota;</span> |*| <li class="navlist-item navlist-item-level1 cur cur_last">|
+            #allWrap = <li id="item_{elementUid}" class="nav-list-item cur cur_first">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="nav-list-item cur">|<span>&Iota;</span> |*| <li id="item_{elementUid}" class="nav-list-item cur cur_last">|
+            allWrap = <li class="nav-list-item nav-list-item--cur">|
             wrapItemAndSub = |</li>
         }
     }
@@ -251,8 +170,10 @@ lib.menuBreadcrumb {
     # Variation: Link nur auf die uebergeordnete Seite
     #special.range = -2|-2
 
-    stdWrap.prepend = TEXT
-    stdWrap.prepend.value = {$glb.lang.menuBreadcrumb.prepend}
+    wrap = <nav class="nav nav--breadcrumb">{$glb.lang.menuBreadcrumb.prepend}|</nav>
+
+    #stdWrap.prepend = TEXT
+    #stdWrap.prepend.value = {$glb.lang.menuBreadcrumb.prepend}
 
     1 = TMENU
     1.target = _top
@@ -319,7 +240,7 @@ lib.language {
       <li class="noTranslation"><img src="fileadmin/default/images/layout/flags/gb_grey.gif" title="en" alt="en">&nbsp;&nbsp;English</li>
     )
   USERDEF1.doNotLinkIt = 1
-  USERDEF1.doNotShowLink = 1  
+  USERDEF1.doNotShowLink = 1
 
   # ACT + Übersetzung nicht vorhanden
   USERDEF2 = 1
@@ -328,6 +249,6 @@ lib.language {
       <li class="noTranslation"><img src="fileadmin/default/images/layout/flags/gb_grey.gif" title="en" alt="en">&nbsp;&nbsp;English</li>
     )
   USERDEF2.doNotLinkIt = 1
-  USERDEF2.doNotShowLink = 1  
+  USERDEF2.doNotShowLink = 1
   }
 }

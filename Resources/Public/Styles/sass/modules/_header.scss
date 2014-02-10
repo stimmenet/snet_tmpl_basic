@@ -1,0 +1,24 @@
+// /*
+// ******************************
+//  | - Header Styles
+// ******************************
+// */
+
+.header {
+    min-height:60px;
+    padding:$width-margin;
+    background:$color-highlight;
+    color:$color-minor;
+    position:relative;
+}
+
+.header a {
+    color:$color-minor;
+    font-style:italic;
+}
+
+.header h1 {
+    @include font-size($fontsize-xl, $fontsize-base);
+    position:absolute;
+    bottom:0;
+}
