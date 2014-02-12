@@ -23,7 +23,7 @@ page {
 	}
 	
 	includeJS {
-		html5shim = <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		html5shim = http://html5shim.googlecode.com/svn/trunk/html5.js
 	}
 
 	### Favicon setzen ###
