@@ -68,36 +68,6 @@ snet_tmpl_basic {
 		footerPid = 9
 	}
 
-	meta {
-		## customsubcategory=metadata=Page Metadata
-		## cat=SNET Basic Template/metadata/0010; type=string; label= Publisher Company
-		authorCompany = STIMME.NET
-
-		## customsubcategory=metadata=Page Metadata
-		## cat=SNET Basic Template/metadata/0010; type=string; label= Author Name
-		authorName = SNET
-
-		## customsubcategory=metadata=Page Metadata
-		## cat=SNET Basic Template/metadata/0010; type=string; label= Author Email
-		authorEmail = info@stimme.net
-
-		# customsubcategory=metadata=Page Metadata
-		# cat=SNET Basic Template/metadata/0010; type=string; label= Template Keywords
-		defaultMetaKeywords =
-
-		# customsubcategory=metadata=Page Metadata
-		# cat=SNET Basic Template/metadata/0010; type=string; label= Template Description
-		defaultMetaDescription =
-
-		# customsubcategory=metadata=Page Metadata
-		# cat=SNET Basic Template/metadata/0010; type=string; label= Google Webmaster Code
-		googleWebmastercode =
-
-		# customsubcategory=metadata=Page Metadata
-		# cat=SNET Basic Template/metadata/0010; type=string; label= Title-Tag apendix
-		titleTagApendix =
-	}
-
 	helper.mwUrlString = mittwaldserver.info
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den Templates

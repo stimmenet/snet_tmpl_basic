@@ -67,10 +67,6 @@ config {
 	###############
 	locale_all = de_DE@euro
 
-	### Ausgabe des Seitentitels im <TITLE> abschalten ###
-	#####################################
-	noPageTitle = 2
-
 	### HTTP_GET_VARS which should be passed on with links in TYPO3 ###
 	###############################################
 	#linkVars = L(0-2), print(1)
