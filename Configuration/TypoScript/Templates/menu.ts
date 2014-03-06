@@ -20,6 +20,7 @@ lib.menuMain {
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
             #allWrap = <li id="item_{elementUid}" class="nav-list-item no no_first">| |*| <li id="item_{elementUid}" class=" nav-list-item no">| |*| <li id="item_{elementUid}" class="nav-list-item no no_last">|
+            #allWrap = <li class="nav-list-item no first">| |*| <li class="nav-list-item no">| |*| <li class="nav-list-item no last">|
             allWrap = <li class="nav-list-item">|
             wrapItemAndSub = |</li>
         }
