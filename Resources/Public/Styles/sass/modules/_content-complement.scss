@@ -1,0 +1,20 @@
+// /*
+// ******************************
+//  | - Komplementärbereich
+// ******************************
+// */
+
+.content-complement {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    padding:0 $width-margin;
+    background:$color-frugal;
+}
+
+.content-complement .csc-default {
+    margin:$width-margin 0;
+}
+
+.content-complement .csc-default:not(:first-child) {
+    border-top:1px solid $color-minor;
+}

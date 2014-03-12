@@ -20,7 +20,7 @@ page {
 		# //TODO: this namespace is not validated by the TypoScript parser   og:image = http://www.stimme.de/stupl/pics/logo_stimmede_quadratisch.gif
 	}
 
-	includeCSS.styles = {$snet_tmpl_basic.cssRootPath}/css/main.css
+	includeCSS.styles = {$snet_tmpl_basic.cssRootPath}/pages/main.css
 
 	javascriptLibs {
 		jQuery = 1
@@ -40,7 +40,7 @@ page {
 	}
 
 	includeJS {
-		html5shim = <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		html5shim = //html5shim.googlecode.com/svn/trunk/html5.js
 	}
 
 	### Favicon setzen ###

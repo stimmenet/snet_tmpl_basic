@@ -17,5 +17,5 @@ page.includeJS {
 
 page.includeCSS {
 	# CSS for Lightbox
-	lightbox = {$snet_tmpl_basic.cssRootPath}/Swipebox/swipebox.css
+	lightbox = {$snet_tmpl_basic.cssRootPath}/vendor/Swipebox/swipebox.css
 }

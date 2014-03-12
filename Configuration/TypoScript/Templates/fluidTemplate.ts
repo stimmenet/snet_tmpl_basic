@@ -10,7 +10,6 @@ page {
 
 		variables {
 			testValue < lib.test
-			col3_content < styles.content.get
 			metanav < lib.menuMeta
 			mainnav < lib.menuMain
 			subnav < lib.menuSub
@@ -18,6 +17,18 @@ page {
 			IE6advice < lib.oldIE
 			footer < lib.footer
 			header_img < lib.headerImage
+
+			content-main <  styles.content.get
+            content-main.select.where = colPos = 0
+
+            content-complement <  styles.content.get
+            content-complement.select.where = colPos = 3
+
+            # content-highlight <  styles.content.get
+            # content-highlight.select.where = colPos = X
+
+            # content-additional <  styles.content.get
+            # content-additional.select.where = colPos = X
 		}
 	}
 }

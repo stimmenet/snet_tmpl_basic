@@ -19,7 +19,6 @@ lib.menuMain {
             ATagParams = class="no"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="nav-list-item no no_first">| |*| <li id="item_{elementUid}" class=" nav-list-item no">| |*| <li id="item_{elementUid}" class="nav-list-item no no_last">|
             #allWrap = <li class="nav-list-item no first">| |*| <li class="nav-list-item no">| |*| <li class="nav-list-item no last">|
             allWrap = <li class="nav-list-item">|
             wrapItemAndSub = |</li>
@@ -29,7 +28,7 @@ lib.menuMain {
             ATagParams = class="act"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="nav-list-item act act_first">| |*| <li id="item_{elementUid}" class="nav-list-item act">| |*| <li id="item_{elementUid}" class="nav-list-item act act_last">|
+            #allWrap = <li class="nav-list-item act act_first">| |*| <li class="nav-list-item act">| |*| <li class="nav-list-item act act_last">|
             allWrap = <li class="nav-list-item nav-list-item--act">|
             wrapItemAndSub = |</li>
         }
@@ -38,7 +37,7 @@ lib.menuMain {
             ATagParams = class="cur"
             ATagTitle.field = subtitle//title
             #subst_elementUid = 1
-            #allWrap = <li id="item_{elementUid}" class="nav-list-item cur cur_first">| |*| <li id="item_{elementUid}" class="nav-list-item cur">| |*| <li id="item_{elementUid}" class="nav-list-item cur cur_last">|
+            #allWrap = <li class="nav-list-item cur cur_first">| |*| <li id="item_{elementUid}" class="nav-list-item cur">| |*| <li id="item_{elementUid}" class="nav-list-item cur cur_last">|
             allWrap = <li class="nav-list-item nav-list-item--cur">|
             wrapItemAndSub = |</li>
         }
@@ -171,7 +170,7 @@ lib.menuBreadcrumb {
     # Variation: Link nur auf die uebergeordnete Seite
     #special.range = -2|-2
 
-    wrap = <nav class="nav nav--breadcrumb">{$glb.lang.menuBreadcrumb.prepend}|</nav>
+    wrap = {$glb.lang.menuBreadcrumb.prepend}|
 
     #stdWrap.prepend = TEXT
     #stdWrap.prepend.value = {$glb.lang.menuBreadcrumb.prepend}

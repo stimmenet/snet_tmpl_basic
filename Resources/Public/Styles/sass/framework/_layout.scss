@@ -1,4 +1,27 @@
+
+// /*
+// ******************************
+//  | - Basic Layout Styles
+// ******************************
+// */
+
+
 .page {
     width:$width-total;
     margin:$width-margin auto;
+}
+
+.content {
+    @include clearfix;
+}
+
+.content-main {
+    width:$width-content-main;
+    margin-right:$width-margin*2;
+    float:left;
+}
+
+.content-complement {
+    width:$width-content-aside;
+    float:left;
 }

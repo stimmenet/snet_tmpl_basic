@@ -51,8 +51,20 @@ plugin.tx_news {
 
 	view {
 		defaultPid = {$snet_tmpl_basic.pid.newsListPid}
-		#templateRootPath =
-		#partialRootPath =
-		#layoutRootPath =
+		templateRootPath >
+		templateRootPaths {
+			10 = EXT:snet_tmpl_basic/Resources/Private/Templates/Extensions/news/
+			50 = {$plugin.tx_news.view.templateRootPath}
+		}
+		partialRootPath >
+		partialRootPaths {
+			10 = EXT:snet_tmpl_basic/Resources/Private/Partials/Extensions/news/
+			50 = {$plugin.tx_news.view.partialRootPath}
+		}
+		layoutRootPath >
+		layoutRootPaths {
+			10 = EXT:snet_tmpl_basic/Resources/Private/Layouts/Extensions/news/
+			50 = {$plugin.tx_news.view.layoutRootPath}
+		}
 	}
 }

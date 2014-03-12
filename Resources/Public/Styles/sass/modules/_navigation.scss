@@ -42,6 +42,26 @@
     top:$width-margin;
 }
 
+.nav--meta .nav-list-item {
+    padding-bottom:6px;
+}
+
+.nav--meta .nav-list-item a {
+    color:$color-minor;
+    padding-bottom:4px;
+    border-bottom:2px solid transparent;
+
+    &:hover {
+        color:$color-main;
+        border-bottom-color:$color-main;
+        text-decoration:none;
+    }
+}
+
+.nav--meta .nav-list-item--cur a {
+    border-bottom-color:$color-minor;
+}
+
 // /*
 //  | - - Main Navigation
 // */

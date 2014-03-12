@@ -1,4 +1,3 @@
-<h1>Welcome to Fluid</h1>
 <f:format.html parseFuncTSPath="">{IE6advice}</f:format.html>
 
 <div class="page">
@@ -8,29 +7,39 @@
         <nav class="nav nav--meta"><f:format.html parseFuncTSPath="">{metanav}</f:format.html></nav>
     </header>
     <nav class="nav nav--main"><f:format.html parseFuncTSPath="">{mainnav}</f:format.html></nav>
+    <nav class="nav nav--breadcrumb"><f:format.html parseFuncTSPath="">{breadcrumb}</f:format.html></nav>
 
     <div class="content">
-        <div id="col1">
-            <div id="col1_content" class="clearfix">
+
+        <!--
+        <div class="content-highlight">
+            <f:format.html parseFuncTSPath="">{content-highlight}</f:format.html>
+        </div>
+        -->
+
+        <!--
+        <aside class="content-navigation">
+            <nav class="nav nav--subnav">
                 <f:format.html parseFuncTSPath="">{subnav}</f:format.html>
-            </div>
+            </nav>
+        </aside>
+        -->
+
+        <div class="content-main">
+            <!--TYPO3SEARCH_begin-->
+            <f:format.html parseFuncTSPath="">{content-main}</f:format.html>
+            <!--TYPO3SEARCH_end-->
         </div>
 
-        <div id="col2">
-            <div id="col2_content" class="clearfix">
-                <f:format.html parseFuncTSPath="">{col2_content}</f:format.html>
-            </div>
-        </div>
+        <aside class="content-complement">
+            <f:format.html parseFuncTSPath="">{content-complement}</f:format.html>
+        </aside>
 
-        <div id="col3">
-            <f:format.html parseFuncTSPath="">{breadcrumb}</f:format.html>
-            <div id="col3_content" class="clearfix">
-                <!--TYPO3SEARCH_begin-->
-                <f:format.html parseFuncTSPath="">{col3_content}</f:format.html>
-                <!--TYPO3SEARCH_end-->
-            </div>
-            <div id="ie_clearing">&nbsp;</div>
-        </div>
+        <!--
+        <aside class="content-additional">
+            <f:format.html parseFuncTSPath="">{content-additional}</f:format.html>
+        </aside>
+        -->
 
     </div>
 

@@ -1,12 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
-
 // /*
 //  | - - Color Values
 // */
 
 $color-main:#333;
 $color-minor:#fff;
-$color-highlight:#0589c3;
+$color-highlight:#059fc3;
+$color-frugal:#efefef;
 
 // /*
 //  | - - Font Sizes
@@ -33,5 +32,5 @@ $font-highlight: $font;
 
 $width-margin: 15px;
 $width-total: 960px;
-$width-content-main: 615px;
-$width-content-aside: 300px;
+$width-content-main: 600px;
+$width-content-aside: 330px;

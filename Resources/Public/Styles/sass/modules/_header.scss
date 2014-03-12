@@ -12,11 +12,6 @@
     position:relative;
 }
 
-.header a {
-    color:$color-minor;
-    font-style:italic;
-}
-
 .header h1 {
     @include font-size($fontsize-xl, $fontsize-base);
     position:absolute;

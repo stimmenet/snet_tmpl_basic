@@ -5,6 +5,8 @@
 ******************************
 */
 
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
 html {
     font-size:$fontsize-base;
     color:$color-main;
@@ -17,7 +19,7 @@ body {
 }
 
 p {
-    margin:1em 0;
+    margin:$width-margin 0;
 }
 
 a {
@@ -30,7 +32,7 @@ a {
 }
 
 a:hover {
-    text-decoration:underline;
+    border-bottom:1px solid $color-main;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,4 +40,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight:bold;
     @include font-size($fontsize-l, $fontsize-base);
     text-transform:uppercase;
+    margin:$width-margin 0;
 }
+
+.col { float: left; }
+.column-3cols { overflow: auto; }
+.column-3cols .col { width: 30%; }
+.column-3cols .col:not(:first-child) { margin-left:5%; }
+
+.column-2cols { overflow: auto; }
+.column-2cols .col { width: 47%; }
+.column-2cols .col:not(:first-child) { margin-left:6%; }

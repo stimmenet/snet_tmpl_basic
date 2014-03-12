@@ -6,9 +6,19 @@ module.exports = function(grunt) {
 				sourcemap : true
      		},
 			dist: {
-				files: {
-					'Resources/Public/Styles/css/main.css' : 'Resources/Public/Styles/sass/_main/main.scss'
-				}
+				files: [
+                    {
+                        expand: true,
+                        cwd: 'Resources/Public/Styles/sass/',
+                        src: ['_pages/**/*.scss', '_sections/**/*.scss', '_vendor/**/*.scss'],
+                        dest: 'Resources/Public/Styles/css/',
+                        ext: '.css',
+                        rename: function(dest, src) {
+                          src = src.replace(/^_/, '');
+                          return dest + src;
+                        }
+                    }
+                ]
 			}
 		},
 		cssmin : {
