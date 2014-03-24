@@ -7,8 +7,8 @@ config {
 
 	### Kommentar im Quelltext ###
 	headerComment (
-	(c) by stimme.net - info@stimme.net - www.stimme.net
-	Die Internetagentur - TYPO3 Websites für Heilbronn, Hohenlohe, Kraichgau
+(c) by stimme.net - info@stimme.net - www.stimme.net
+Die Internetagentur - TYPO3 Websites für Heilbronn, Hohenlohe, Kraichgau
 	)
 
 	### Doctype Definition            ###

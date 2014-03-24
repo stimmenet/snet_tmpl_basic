@@ -14,8 +14,6 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array (
 			'enableUrlEncodeCache' => '1',
 		),
 		'redirects' => array (
-			'sitemap.xml' => 'index.php?eID=dd_googlesitemap',
-			'news-sitemap.xml' => 'index.php?eID=dd_googlesitemap&sitemap=news&pidList=11&singlePid=13'
 		),
 		'preVars' => array (
 			array(
@@ -90,6 +88,11 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array (
 				'feed.rss' => array(
 					'keyValues' => array(
 						'type' => 9818,
+					)
+				),
+				'sitemap.xml' => array(
+					'keyValues' => array(
+						'type' => 841132,
 					)
 				),
 			),

@@ -23,8 +23,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/news/news.ts">
 # gridelements
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/gridelements/gridelements.ts">
-# dd_googlesitemap
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/dd_googlesitemap/dd_googlesitemap.ts">
 
 ######## Translations #########
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/languages.ts">
