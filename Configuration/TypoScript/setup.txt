@@ -1,3 +1,6 @@
+######## Static-Tempaltes #########
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/staticTemplates.ts">
+
 ######## Template-Stuff #########
 # Base-Url
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/baseUrl.ts">
