@@ -1,3 +1,6 @@
+######## Static-Tempaltes #########
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/staticTemplates.ts">
+
 ######## Template-Stuff #########
 # Base-Url
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/baseUrl.ts">
@@ -5,8 +8,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/config.ts">
 # Main-Menu, Meta-Menu, ...
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/menu.ts">
-# Title-Tag
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/titleTag.ts">
 # Header-Image
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/headerImage.ts">
 # Footer
@@ -25,8 +26,6 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/news/news.ts">
 # gridelements
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/gridelements/gridelements.ts">
-# dd_googlesitemap
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/dd_googlesitemap/dd_googlesitemap.ts">
 
 ######## Translations #########
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/languages.ts">

@@ -1,3 +1,6 @@
+######## Static-Tempaltes #########
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/staticTemplates.constants.ts">
+
 # Vom Integrator editierbare Werte die im Constanteditor dokumentiert sind
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Templates/constants.ts">
 
@@ -6,3 +9,4 @@
 
 # Extensions
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/wt_spamshield/wt_spamshield.constants.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:snet_tmpl_basic/Configuration/TypoScript/Extensions/tq_seo/tq_seo.constants.ts">

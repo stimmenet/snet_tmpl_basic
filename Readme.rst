@@ -1,15 +1,38 @@
-Extension Manual
+VORGABEN snet_tmpl_basic
 =================
 
-This is a template manual aiming to pave the way to developers when it comes about documentation. The template provides a structure that a developer can take over and, in addition, many useful snippets and examples. Documentation is written in reST format. Refer to Help writing reStructuredText to get some more insight about the syntax and available reST editors. For instance, you might be particularly interested how you can :
+[SNET-intern]
 
-* generate the documentation using on-line services (@todo to write) 
-* `make links`_ accros projects
-* how you should write TypoScript reference.
+* pull von biergit
+* lokales bearbeiten über vagrant
+* push als neue ext auf biergit und auf mittwald
+* keine änderung direkt auf mittwald
 
-Any idea or suggestion for improving this template `can be drop`_ to our team_. And remember: documentation is like gift wrapping, it looks like superfluous, but your friend tends to be rather disappointed when their presents arrive in supermarket carrier bags. (Documentation-Driven Design quote)
+[/SNET-intern]
 
-.. _can be drop: http://forge.typo3.org/projects/typo3v4-official_extension_template/issues
-.. _team: http://forge.typo3.org/projects/typo3v4-official_extension_template
-.. _make links: RestructuredtextHelp.html#cross-linking
-.. _can write TypoScript: RestructuredtextHelp.html#typoscript-reference
+
+* Wenn die Startseite nicht im Hauptmenü, sondern nur im Metamenü auftaucht, wird diese trotzdem direkt im Hautpmenü als erste Seite angelegt und auf "im Menü verbergen" gesetzt. Somit haben wir immer /start.html anstelle von /meta/start.html Achtung: Hier ggf. nochmals Änderung vornehmen wegen default-Seite als Verweis!
+* Seiten unterhalb von Funktionsseite werden im Normalfall aus Indizierung und von RealURL ausgeschlossen. Ausnahmen: 404 Seite muss für RealURL konfiguriert sein. Evt. weitere Seiten wenn diese eine spezielle Aufgabe übernehmen
+
+* Struktur TypoScript->Extensions->[ext_key]->[ext_key].ts + evt. [ext_key.constants.ts]
+* Struktur TypoScript->Templates-> [lowerCamelCase].ts + constants.ts (--> keine Änderungen in constants.ts)
+
+* Benutzer + Benutzergruppen-TS-Config werden [user_name].tsconfig.ts bzw. [group_name].tsconfig.ts benannt und in das Verzeichnis "Configuration/TSconfig/User" bzw. "Configuration/TSconfig/UserGroup" gespeichert. Diese Datei muss dann im entsprechenden Datensatz per "include-typoscript" eingebunden werden
+
+* Seiten-TS-Config für bestimmte Seiten werden page.[pid].tsconfig.ts benannt und in das Verzeichnis "Configuration/TSconfig/Page" gespeichert. Diese Datei muss dann auf der entsprechenden Seite per "include-typoscript" eingebunden werden
+* Seiten-TS-Config für mehrere Seiten werden page.[pid1]-[pid2]-[pid3].tsconfig.ts benannt und in das Verzeichnis "Configuration/TSconfig/Page" gespeichert. Diese Datei muss dann auf allen entsprechenden Seite per "include-typoscript" eingebunden werden
+
+* HTML-Templates werden Ihrer Verwendung entsprechend benannt. z.B. defaultTemplate.html + startTemplate.html
+
+* lib-Objekte werden über variables an Fluid übergeben
+
+* Typoscript-Objekte (Snippets) in page.0.ts erzeugen und dann über variables an Fluid übergeben
+
+* RealURL-Konfiguration befindet sich in der ext_localconf.php in der snet_tmpl_basic
+
+* Alle Conditions befinden sich in der Datei conditions.ts und werden dort sinnvoll in Blöcke (includes, templates, extensions) unterteilt.
+* Typoscript für bestimmte/mehrere Seiten werden in der consitions.ts in einem entsprechendwn Block (includes) eingebunden
+
+* Pfade werden immer über Konstanten verwendet, diese liegen dann zentral in constants.ts
+
+* Weitere benötigte Extensions in ext_emconf.php hinterlegen und deren TS ggf. in constants.txt und setup.txt hinterlegen

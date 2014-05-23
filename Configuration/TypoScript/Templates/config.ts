@@ -7,8 +7,8 @@ config {
 
 	### Kommentar im Quelltext ###
 	headerComment (
-	(c) by stimme.net - info@stimme.net - www.stimme.net
-	Die Internetagentur - TYPO3 Websites für Heilbronn, Hohenlohe, Kraichgau
+(c) by stimme.net - info@stimme.net - www.stimme.net
+Die Internetagentur - TYPO3 Websites für Heilbronn, Hohenlohe, Kraichgau
 	)
 
 	### Doctype Definition            ###
@@ -66,10 +66,6 @@ config {
 	### PHP:setlocale ###
 	###############
 	locale_all = de_DE@euro
-
-	### Ausgabe des Seitentitels im <TITLE> abschalten ###
-	#####################################
-	noPageTitle = 2
 
 	### HTTP_GET_VARS which should be passed on with links in TYPO3 ###
 	###############################################
