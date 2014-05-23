@@ -28,7 +28,6 @@ Die Internetagentur - TYPO3 Websites für Heilbronn, Hohenlohe, Kraichgau
 	#########################
 	disablePrefixComment = 1
 	removeDefaultJS = external
-	minifyJS = 1
 	inlineStyle2TempFile = 1
 
 	### Max.Groesse fuer Bilder entspricht Original ###
@@ -84,11 +83,11 @@ Die Internetagentur - TYPO3 Websites für Heilbronn, Hohenlohe, Kraichgau
 	### ClassicTemplate internal Target. Uses by typolink if no target is set ###
 	###########################################
 	intTarget = _self
-	
+
 	### Sprache ###
 	###############
 	sys_language_mode = strict
-	
+
 }
 
 ### XHTML Prolog   ###

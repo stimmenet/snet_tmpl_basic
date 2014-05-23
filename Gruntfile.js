@@ -21,6 +21,18 @@ module.exports = function(grunt) {
                 ]
 			}
 		},
+        autoprefixer: {
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'Resources/Public/Styles/css/',
+                        src: ['pages/**/*.css', 'sections/**/*.css', 'vendor/**/*.css'],
+                        dest: 'Resources/Public/Styles/css/'
+                    }
+                ]
+            }
+        },
 		cssmin : {
             css:{
                 src: 'css/main.css',
@@ -30,12 +42,13 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 				files: '**/*.scss',
-				tasks: ['sass']
+				tasks: ['sass', 'autoprefixer']
 			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.registerTask('default',['watch']);
 }
