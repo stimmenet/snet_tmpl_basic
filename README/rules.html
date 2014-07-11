@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Readme</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/night.css" />
+<script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="snet-fe-baseline-20">
+<h1 id="regeln-f-r-snet_febaseline">Regeln für snet_feBaseline</h1>
+<h2 id="ordnerstruktur">Ordnerstruktur</h2>
+<ul>
+<li><p><strong>css</strong></p>
+<ul>
+<li>main.css</li>
+<li>start.css</li>
+</ul>
+</li>
+<li><p><strong>scss</strong></p>
+<ul>
+<li><p><strong>_pages</strong></p>
+<ul>
+<li><p><strong>main.scss:</strong></p>
+<pre><code>  @import &#39;../functions/all&#39;;
+  @import &#39;../mixins/all&#39;;
+  @import &#39;../framework/all&#39;;
+  @import &#39;../modules/all&#39;;</code></pre>
+</li>
+<li><p><strong>start.scss:</strong></p>
+<pre><code>  @import &#39;../content-start&#39;;</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>_sections</strong> (enthält Extensions)</p>
+</li>
+<li><p><strong>_vendor</strong> (enthält z. B. JS-Schnipsel wie die Swipebox)</p>
+</li>
+<li><p><strong>framework</strong> (enthält Basisdateien)</p>
+<ul>
+<li><strong>_all.scss:</strong> importiert die nachfolgenden Dateien</li>
+<li><strong>_base.scss:</strong> Styles für HTML-Elemente</li>
+<li><strong>_layout.scss:</strong> </li>
+<li><strong>_normalize.scss:</strong> für gleiche Ausgangsbasis in versch. Browsern</li>
+<li><strong>_variables.scss:</strong> für Projekt definierte Variablen (Farbwerte, Schriftarten + -Größen, Breitenangaben...)</li>
+</ul>
+</li>
+<li><p><strong>functions</strong></p>
+</li>
+<li><p><strong>mixins</strong></p>
+<ul>
+<li><strong>_mq.scss:</strong> Mediaqueries</li>
+<li><strong>_rem.scss</strong></li>
+</ul>
+</li>
+<li><p><strong>modules</strong></p>
+<ul>
+<li><strong>_all.scss:</strong> importiert die nachfolgenden Dateien (außer die für die Startseite)</li>
+<li><strong>_header.scss</strong></li>
+<li><strong>_content.scss</strong></li>
+<li><strong>_content-start.scss</strong></li>
+<li><strong>_footer.scss</strong></li>
+<li>etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="html-css-namensgebung">HTML / CSS Namensgebung</h2>
+<ul>
+<li>IDs nicht für Styling, nur für Javascript oder Anker benutzen</li>
+<li>Klassennamen sinnvoll vergeben nach Inhalt, nicht nach Aussehen</li>
+<li>CSS Selektoren nur auf Klassen beziehen, nicht auf Elementname, wenn möglich</li>
+<li><p>Benennung nach BEM </p>
+<ul>
+<li><p>= block-element- -modifier</p>
+<pre><code>  nav-list--level1</code></pre>
+</li>
+<li><p>Kleinschreibung, kein CamelCase!</p>
+<pre><code>  .headerimage statt .headerImage</code></pre>
+</li>
+<li>Keine Bindestriche, außer für BEM-Syntax</li>
+<li>Keine Unterstriche</li>
+<li><p>Es kann Sub-Elemente von Elementen geben</p>
+<pre><code>  .nav-list-item</code></pre>
+</li>
+<li><p>Es kann Sub-Modifier von Modifiern geben</p>
+<pre><code>  .nav-list--level1--active</code></pre>
+</li>
+<li><p>Nur der Block bzw. das Eltern-Element enthält den Modifier, die darunterliegenden Elemente nicht</p>
+<pre><code>  .nav-list--level2 &gt; .nav-list-item</code></pre>
+</li>
+<li>Ein Element muss im eindeutigen Kontext zum Block bzw. Eltern-Element stehen</li>
+<li>Allgemeine globale Klassen sind gültig</li>
+<li><p>Allgemeine Klassen, die sich innerhalb eines Blocks geringfügig anders verhalten, werden in Abhängigkeit vom Block gestyled, aber nicht als BEM-Klassen</p>
+<pre><code>  .logo { }
+  .header .logo { }</code></pre>
+</li>
+<li><p>Helferklassen zur Userinteraktion sind nicht nach BEM-Muster benannt</p>
+<pre><code>  .active, .inactive</code></pre>
+</li>
+<li><p>zu testen: Jeder CSS-&quot;Befehl&quot; sollte aus nicht mehr als 3 einzelnen Selektoren bestehen (Pseudo-Klassen NICHT inbegriffen)</p>
+<pre><code>  .nav--main .nav-list--level1 &gt; .nav-list-item</code></pre>
+</li>
+<li>Widerspricht nicht dem Einsatz von Bootstrap oder anderen Frameworks, diese sind wie bisher als globale Klassen ohne BEM zu benutzen</li>
+<li><p>Hilfsklassen (Wrapper- oder Container-Klassen) werden innerhalb der Block-Klasse als Element-Klasse &quot;blockname-frame&quot; aufgeführt, können aber in Unter-Element-Klassen aus semantischen Gründen aus dem BEM-String weggelassen werden</p>
+<pre><code>  .content 
+      .content-frame --&gt; Hilfsklasse für Breitenangaben/Margins
+          .content-main
+          .content-additional</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="bilder-namensgebung">Bilder Namensgebung</h2>
+<ul>
+<li>Kategorisierung<ul>
+<li>Icons<ul>
+<li>Social Media Icons</li>
+<li>Kontakt Icons</li>
+<li>Language Icons</li>
+<li>Pfeile?</li>
+</ul>
+</li>
+<li>Hintergrund</li>
+<li>weitere Kategorien?</li>
+</ul>
+</li>
+<li>Benennung mit Präfix<ul>
+<li>icon_ / icon-</li>
+<li>bg_ / bg-</li>
+<li>arrow_ / arrow- ?</li>
+</ul>
+</li>
+</ul>
+
+</div></body>
+</html>
