@@ -9,6 +9,6 @@
 #[PIDupinRootline = pages-uid, pages-uid, ...]
 #[global]
 
-[globalVar = GP:snet_style = debug]
+#[globalVar = GP:snet_debug = 1]
 #disable minimizing css
-[GLOBAL]
+#[GLOBAL]

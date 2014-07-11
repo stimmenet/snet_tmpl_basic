@@ -1,6 +1,6 @@
 {
   "name": "snet_feBaseline",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Project for creating a new productive frontend baseline.",
   "repository": {
     "type": "git",
@@ -8,10 +8,11 @@
   },
   "author": "Sonja Zintz, Daniel Hirth",
   "devDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "~0.4.5",
     "grunt-contrib-sass": "~0.5.1",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-cssmin": "~0.7.0",
-    "grunt-autoprefixer": "~0.7.3"
+    "grunt-autoprefixer": "~0.7.3",
+    "grunt-markdown": "~0.6.1"
   }
 }

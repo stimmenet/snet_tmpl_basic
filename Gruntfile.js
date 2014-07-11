@@ -39,16 +39,35 @@ module.exports = function(grunt) {
                 dest: 'css/main.min.css'
             }
         },
+        markdown: {
+            all: {
+                files: [{
+                    expand: true,
+                    src: 'README/src/*.md',
+                    dest: 'README/',
+                    flatten: true,
+                    ext: '.html'
+                }],
+                options: {
+                    template: 'README/src/template.html'
+                }
+            }
+        },
 		watch: {
 			css: {
-				files: '**/*.scss',
-				tasks: ['sass', 'autoprefixer']
+                files: '**/*.scss',
+                tasks: ['sass', 'autoprefixer']
+            },
+            markdown: {
+				files: '**/*.md',
+				tasks: ['markdown']
 			}
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	//grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-markdown'); //
     grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.registerTask('default',['watch']);
 }
