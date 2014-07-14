@@ -33,14 +33,9 @@ page {
 		}
 	}
 
-	includeJSlibs {
-		#jQuery-easing = {$snet_tmpl_basic.jsRootPath}/jquery.easing-1.3.js
-		#jQuery-ui = //ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js
-		#jQuery-ui.external = 1
-	}
-
 	includeJS {
-		html5shim = //html5shim.googlecode.com/svn/trunk/html5.js
+		yepnope = //cdnjs.cloudflare.com/ajax/libs/yepnope/1.5.4/yepnope.min.js
+		scriptloader = {$snet_tmpl_basic.jsRootPath}/scriptloader.js
 	}
 
 	### Favicon setzen ###

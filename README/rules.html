@@ -39,7 +39,7 @@
 <ul>
 <li><strong>_all.scss:</strong> importiert die nachfolgenden Dateien</li>
 <li><strong>_base.scss:</strong> Styles für HTML-Elemente</li>
-<li><strong>_layout.scss:</strong> </li>
+<li><strong>_layout.scss:</strong></li>
 <li><strong>_normalize.scss:</strong> für gleiche Ausgangsbasis in versch. Browsern</li>
 <li><strong>_variables.scss:</strong> für Projekt definierte Variablen (Farbwerte, Schriftarten + -Größen, Breitenangaben...)</li>
 </ul>
@@ -70,7 +70,7 @@
 <li>IDs nicht für Styling, nur für Javascript oder Anker benutzen</li>
 <li>Klassennamen sinnvoll vergeben nach Inhalt, nicht nach Aussehen</li>
 <li>CSS Selektoren nur auf Klassen beziehen, nicht auf Elementname, wenn möglich</li>
-<li><p>Benennung nach BEM </p>
+<li><p>Benennung nach BEM</p>
 <ul>
 <li><p>= block-element- -modifier</p>
 <pre><code>  nav-list--level1</code></pre>
@@ -98,12 +98,15 @@
 <li><p>Helferklassen zur Userinteraktion sind nicht nach BEM-Muster benannt</p>
 <pre><code>  .active, .inactive</code></pre>
 </li>
+<li><p>Klassen, die nicht zur Gestaltung eines Elements, sondern ausschließlich zum Interagieren mit Javascript bestehen, sollten mit dem Präfix <code>js-</code> gekennzeichnet werden</p>
+<pre><code>  div class=&quot;js-draggable&quot;, a class=&quot;js-togglecontent&quot;, ...</code></pre>
+</li>
 <li><p>zu testen: Jeder CSS-&quot;Befehl&quot; sollte aus nicht mehr als 3 einzelnen Selektoren bestehen (Pseudo-Klassen NICHT inbegriffen)</p>
 <pre><code>  .nav--main .nav-list--level1 &gt; .nav-list-item</code></pre>
 </li>
-<li>Widerspricht nicht dem Einsatz von Bootstrap oder anderen Frameworks, diese sind wie bisher als globale Klassen ohne BEM zu benutzen</li>
+<li>Widerspricht nicht dem Einsatz von Bootstrap oder anderen Frameworks, diese sind wie bisher als globale Klassen ohne BEM zu benutzen, grundsätzlich sollten größere Externe Komponenten wie CSS-Frameworks, allerdings, sofern möglich, ebenfalls mit einem eindeutigen Präfix versehen werden, z.B. <code>tbs-Klassenname</code></li>
 <li><p>Hilfsklassen (Wrapper- oder Container-Klassen) werden innerhalb der Block-Klasse als Element-Klasse &quot;blockname-frame&quot; aufgeführt, können aber in Unter-Element-Klassen aus semantischen Gründen aus dem BEM-String weggelassen werden</p>
-<pre><code>  .content 
+<pre><code>  .content
       .content-frame --&gt; Hilfsklasse für Breitenangaben/Margins
           .content-main
           .content-additional</code></pre>
@@ -111,24 +114,25 @@
 </ul>
 </li>
 </ul>
-<h2 id="bilder-namensgebung">Bilder Namensgebung</h2>
+<h2 id="javascript-loading">Javascript-Loading</h2>
+<p>Einführung von <code>yepnope.js</code> als &quot;conditional resource loader&quot; zum besseren steuern, welches Skript wann in welcher Abhängigkeit geladen werden soll.</p>
 <ul>
-<li>Kategorisierung<ul>
-<li>Icons<ul>
-<li>Social Media Icons</li>
-<li>Kontakt Icons</li>
-<li>Language Icons</li>
-<li>Pfeile?</li>
+<li>Über TYPOSCRIPT werden nur noch <code>yepnope.js</code> selbst und die Datei <code>scriptloader.js</code> geladen, die als Einstieg dienen.</li>
+<li>In der <code>scriptloader.js</code> werden alle nötigen weiteren Skripte geladen und definiert.</li>
+<li>Das &quot;herkömmliche Laden&quot; von CSS-Dateien und Skripten aus Extensions (z.B. Powermail) wird, sofern möglich, über TYPOSCRIPT vollständig deaktiviert, stattdessen werden die Skripte über die  <code>scriptloader.js</code> Datei eingebaut</li>
+<li>Das Grundgerüst des neuen Workflows besteht aus 4 Skripten<ul>
+<li><a href="http://yepnopejs.com/">yepnope.js</a> für asynchrones Laden von Ressourcen</li>
+<li><a href="http://modernizr.com/">Modernizr</a> für Javascript-basierte Feature Detection</li>
+<li><a href="http://jquery.com/">jQuery</a> für Element-Selektion und -Manipulation</li>
+<li><a href="https://github.com/sparkbox/mediaCheck">MediaCheck</a> für Code-Ausführung beim Betreten und Verlassen von Responsive Breakpoints</li>
 </ul>
 </li>
-<li>Hintergrund</li>
-<li>weitere Kategorien?</li>
-</ul>
-</li>
-<li>Benennung mit Präfix<ul>
-<li>icon_ / icon-</li>
-<li>bg_ / bg-</li>
-<li>arrow_ / arrow- ?</li>
+<li>Diese vier Skripte stellen die Basis dar um sauber und strukturiert mit Javascript zu arbeiten, sollen aber im Produktiveinsatz nur dann auch geladen werden, wenn sie gebraucht werden</li>
+<li>Beispiele zum Einsatz und zur Syntax von <code>yepnope.js</code> sind in der <code>scriptloader.js</code> vorhanden.</li>
+<li>Für das Laden eigener Skripte gibt es in der <code>scriptloader.js</code> zwei Platzhalder<ul>
+<li><code>PLACEHOLDER 1</code> wird genutzt, wenn das jeweilige Skript so bald wie möglich im Seiten-Lade-Vorgang geladen werden und zur Verfügung stehen soll</li>
+<li><code>PLACEHOLDER 2</code> wird genutzt, wenn das jeweilige Skript erst nach erfolgreichem Seiten-Lade-Vorgang geladen und zur Verfügung stehen soll bzw. kann</li>
+<li>Tiefergreifende Erklärungen zu Syntax und Einsatzzwecken der Tools finden sich auf den jeweiligen Homepages</li>
 </ul>
 </li>
 </ul>

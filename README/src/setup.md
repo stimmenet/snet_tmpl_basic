@@ -7,7 +7,7 @@ To be able to get the full benefits of this workflow, you first need to install 
 
  - Ruby
  - Sass
- - node.js hallo
+ - node.js
 
 Keep in mind that git is considered obligatory at this point. If you do not have it yet, [go get it][1].
 
