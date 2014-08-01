@@ -360,7 +360,7 @@ p {
   margin: 15px 0; }
 
 a {
-  color: #059fc3;
+  color: #00aa55;
   text-decoration: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
@@ -418,7 +418,7 @@ h1, h2, h3, h4, h5, h6 {
 .header {
   min-height: 60px;
   padding: 15px;
-  background: #059fc3;
+  background: #00aa55;
   color: white;
   position: relative; }
 
@@ -481,7 +481,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom-color: white; }
 
 .nav--main .nav-list-item--cur a {
-  border-bottom-color: #059fc3; }
+  border-bottom-color: #00aa55; }
 
 .nav--breadcrumb {
   margin: 15px 0; }
