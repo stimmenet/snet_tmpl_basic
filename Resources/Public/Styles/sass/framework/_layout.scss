@@ -16,12 +16,9 @@
 }
 
 .content-main {
-    width:$width-content-main;
-    margin-right:$width-margin*2;
-    float:left;
+    @include span-columns($columns-main);
 }
 
 .content-complement {
-    width:$width-content-aside;
-    float:left;
+    @include span-columns($columns-complement);
 }

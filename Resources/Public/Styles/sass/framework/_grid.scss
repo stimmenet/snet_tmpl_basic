@@ -1,0 +1,37 @@
+// /*
+//  | - - Grid Variables
+// */
+
+$grid-columns: 24;
+
+$gutter: percentage($width-margin/$width-total);
+$column: percentage($width-column/$width-total);
+
+$columns-main: 18;
+$columns-complement: 6;
+
+// /*
+//  | - - Import Bourbon & Neat
+// */
+
+@import 'bourbon';
+@import 'neat';
+
+// /*
+//  | - - Demo Styles, please delete
+// */
+
+.demogrid-column {
+    background:$color-highlight;
+    color:$color-minor;
+    padding:$width-margin;
+}
+
+.demogrid-column--main {
+    @include span-columns(14 of $columns-main);
+}
+
+.demogrid-column--aside {
+    @include span-columns(4 of $columns-main);
+}
+
