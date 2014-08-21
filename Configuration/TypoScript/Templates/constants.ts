@@ -87,7 +87,7 @@ snet_tmpl_basic {
 	cssRootPath = EXT:snet_tmpl_basic/Resources/Public/Styles/min
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den Images
-	imgRootPath = EXT:snet_tmpl_basic/Resources/Public/Images
+	imgRootPath = EXT:snet_tmpl_basic/Resources/Public/Images/src
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den JS-Dateien
 	jsRootPath = EXT:snet_tmpl_basic/Resources/Public/Scripts/JS
