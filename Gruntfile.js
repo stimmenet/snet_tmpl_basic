@@ -35,9 +35,12 @@ module.exports = function(grunt) {
             }
         },
 		cssmin : {
-            css:{
-                src: 'css/main.css',
-                dest: 'css/main.min.css'
+            minify: {
+                expand: true,
+                cwd: 'Resources/Public/Styles/css/',
+                src: ['**/*.css'],
+                dest: 'Resources/Public/Styles/min/',
+                ext: '.css'
             }
         },
         markdown: {
@@ -57,7 +60,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
                 files: '**/*.scss',
-                tasks: ['sass', 'autoprefixer']
+                tasks: ['sass', 'autoprefixer', 'cssmin']
             },
             markdown: {
 				files: '**/*.md',
@@ -67,7 +70,7 @@ module.exports = function(grunt) {
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	//grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-markdown'); //
     grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.registerTask('default',['watch']);

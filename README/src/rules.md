@@ -92,6 +92,18 @@
                     .content-main
                     .content-additional
 
+## CSS Source Maps ##
+
+Die aus den Sass-Dateien generierten CSS-Files werden im Ordner `Resources/Public/Styles/css/` abgelegt. Dank der CSS Source Maps kann man trotz Nutzung der generierten CSS-Dateien direkt im Browser prüfen, aus welcher Sass-Datei genau welche Styleregel stammt.
+
+Diese Funktion kann in aktuellen Versionen der Browser `Chrome` und `Firefox` genutzt werden. Dazu muss man lediglich die Developer Tools (Taste `F12`) öffnen und in den Einstellungen die Source Maps aktivieren. Anschließend kann man über den Inspektor direkt die Herkunft der Styleregeln aus den Sass-Dateien einsehen.
+
+## CSS-Minimierung ##
+
+Beim Ändern bzw. Speichern von scss-Dateien generiert grunt automatisch eine minimierte Version aller aus Sass generierten CSS Dateien. Diese werden im Ordner `Resources/Public/Styles/min/`abgelegt. Dieser Pfad wird auch für die TS-Konstante `$snet_tmpl_basic.cssRootPath` verwendet. Aus Performancegründen sollten im Produktiveinsatz grundsätzlich die minimierten Dateien zum Einsatz kommen.
+
+Um dennoch nicht auf die für die Entwicklung sehr praktischen Source Maps zu verzichten, wurde eine Condition eingebaut, die die oben genannte Konstante mit dem Pfad `Resources/Public/Styles/css/` überschreibt, sobald der GET-Parameter `devmode` gesetzt ist. Um die CSS Source Maps zu nutzen muss also einfach `&devmode=1` bzw. `?devmode=1`an die URL der zu testenden Seite angehängt werden.
+
 ## Javascript-Loading ##
 
 Einführung von `yepnope.js` als "conditional resource loader" zum besseren steuern, welches Skript wann in welcher Abhängigkeit geladen werden soll.

@@ -84,7 +84,7 @@ snet_tmpl_basic {
 	partialRootPath = EXT:snet_tmpl_basic/Resources/Private/Partials
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den Stylesheets
-	cssRootPath = EXT:snet_tmpl_basic/Resources/Public/Styles/css
+	cssRootPath = EXT:snet_tmpl_basic/Resources/Public/Styles/min
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den Images
 	imgRootPath = EXT:snet_tmpl_basic/Resources/Public/Images
@@ -109,3 +109,7 @@ styles.content {
 	}
 	uploads.filesizeBytesLabels = " | KB| MB| GB"
 }
+
+[globalVar = GP:devmode = 1]
+	snet_tmpl_basic.cssRootPath = EXT:snet_tmpl_basic/Resources/Public/Styles/css
+[global]
