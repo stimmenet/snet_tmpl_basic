@@ -114,6 +114,15 @@
 </ul>
 </li>
 </ul>
+<h2 id="css-grid">CSS Grid</h2>
+<p>Mit <a href="http://neat.bourbon.io/">Neat</a> wurde ein neues Grid-System eingeführt. Neat ist eine leichtgewichtige Sammlung an Mixins und Variablen für Sass und basiert auf <a href="http://bourbon.io/">Bourbon</a>, ebenfalls eine Mixin-Sammlung für Sass.</p>
+<p>Die Installation der beiden Tools erfolgt automatisch mit dem Befehl <code>npm install</code> über das Node-Plugin <code>node-neat</code>, anschließend stehen die beiden Libraries ohne weiteres Zutun zur Verfügung.</p>
+<p>Um das Grid-System zu nutzen, müssen die drei Sass-Variablen <code>$width-total</code>, <code>$width-margin</code> und <code>$width-column</code> in der Datei <code>framework/_variables.scss</code> mit konkreten Pixelwerten befüllt werden. In der Datei <code>framework/_grid.scss</code> lässt sich über die Variable <code>$grid-columns</code> die Anzahl der zu verwendenden Spalten festlegen. Anhand der vier oben genannten Variablen werden automatisch die nötigen prozentualen Werte für Spaltenbreite und -abstände berechnet.</p>
+<p>Anschließend kann man den gewünschten HTML-Elementen über den Mixin Aufruf</p>
+<pre><code>@include span-columns(SPALTENZAHL);</code></pre>
+<p>eine Spaltigkeit zuweisen. Für das Definieren einer Spalte innerhalb einer Spalte in der richtigen Breite gibt es ebenfalls einen Aufruf:</p>
+<pre><code>@include span-columns(KIND-SPALTENZAHL of ELTERN-SPALTENZAHL);</code></pre>
+<p>Sowohl Bourbon als auch Neat besitzen natürlich eine Vielzahl weiterer Mixins und Funktionen, die ebenfalls benutzt werden können, hierfür lohnt sich ein Blick in die jeweiligen Dokumentationen (<a href="http://bourbon.io/docs/">Bourbon</a>, <a href="http://neat.bourbon.io/docs/">Neat</a>).</p>
 <h2 id="css-source-maps">CSS Source Maps</h2>
 <p>Die aus den Sass-Dateien generierten CSS-Files werden im Ordner <code>Resources/Public/Styles/css/</code> abgelegt. Dank der CSS Source Maps kann man trotz Nutzung der generierten CSS-Dateien direkt im Browser prüfen, aus welcher Sass-Datei genau welche Styleregel stammt.</p>
 <p>Diese Funktion kann in aktuellen Versionen der Browser <code>Chrome</code> und <code>Firefox</code> genutzt werden. Dazu muss man lediglich die Developer Tools (Taste <code>F12</code>) öffnen und in den Einstellungen die Source Maps aktivieren. Anschließend kann man über den Inspektor direkt die Herkunft der Styleregeln aus den Sass-Dateien einsehen.</p>

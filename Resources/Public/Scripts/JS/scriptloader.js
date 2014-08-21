@@ -45,7 +45,7 @@ function loadOnReady() {
                 yep: [
                     '/typo3conf/ext/snet_tmpl_basic/Resources/Public/Scripts/JS/Swipebox/jquery.swipebox.min.js',
                     '/typo3conf/ext/snet_tmpl_basic/Resources/Public/Scripts/JS/Swipebox/enable_swipebox.js',
-                    '/typo3conf/ext/snet_tmpl_basic/Resources/Public/Styles/css/vendor/Swipebox/swipebox.css'
+                    '/typo3conf/ext/snet_tmpl_basic/Resources/Public/Styles/min/vendor/Swipebox/swipebox.css'
                 ]
             }
             /*

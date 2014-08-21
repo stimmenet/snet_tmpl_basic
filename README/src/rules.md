@@ -92,6 +92,24 @@
                     .content-main
                     .content-additional
 
+## CSS Grid ##
+
+Mit [Neat][1] wurde ein neues Grid-System eingeführt. Neat ist eine leichtgewichtige Sammlung an Mixins und Variablen für Sass und basiert auf [Bourbon][2], ebenfalls eine Mixin-Sammlung für Sass.
+
+Die Installation der beiden Tools erfolgt automatisch mit dem Befehl `npm install` über das Node-Plugin `node-neat`, anschließend stehen die beiden Libraries ohne weiteres Zutun zur Verfügung.
+
+Um das Grid-System zu nutzen, müssen die drei Sass-Variablen `$width-total`, `$width-margin` und `$width-column` in der Datei `framework/_variables.scss` mit konkreten Pixelwerten befüllt werden. In der Datei `framework/_grid.scss` lässt sich über die Variable `$grid-columns` die Anzahl der zu verwendenden Spalten festlegen. Anhand der vier oben genannten Variablen werden automatisch die nötigen prozentualen Werte für Spaltenbreite und -abstände berechnet.
+
+Anschließend kann man den gewünschten HTML-Elementen über den Mixin Aufruf
+
+    @include span-columns(SPALTENZAHL);
+
+eine Spaltigkeit zuweisen. Für das Definieren einer Spalte innerhalb einer Spalte in der richtigen Breite gibt es ebenfalls einen Aufruf:
+
+    @include span-columns(KIND-SPALTENZAHL of ELTERN-SPALTENZAHL);
+
+Sowohl Bourbon als auch Neat besitzen natürlich eine Vielzahl weiterer Mixins und Funktionen, die ebenfalls benutzt werden können, hierfür lohnt sich ein Blick in die jeweiligen Dokumentationen ([Bourbon][3], [Neat][4]).
+
 ## CSS Source Maps ##
 
 Die aus den Sass-Dateien generierten CSS-Files werden im Ordner `Resources/Public/Styles/css/` abgelegt. Dank der CSS Source Maps kann man trotz Nutzung der generierten CSS-Dateien direkt im Browser prüfen, aus welcher Sass-Datei genau welche Styleregel stammt.
@@ -112,10 +130,10 @@ Einführung von `yepnope.js` als "conditional resource loader" zum besseren steu
  - In der `scriptloader.js` werden alle nötigen weiteren Skripte geladen und definiert.
  - Das "herkömmliche Laden" von CSS-Dateien und Skripten aus Extensions (z.B. Powermail) wird, sofern möglich, über TYPOSCRIPT vollständig deaktiviert, stattdessen werden die Skripte über die  `scriptloader.js` Datei eingebaut
  - Das Grundgerüst des neuen Workflows besteht aus 4 Skripten
-     - [yepnope.js][1] für asynchrones Laden von Ressourcen
-     - [Modernizr][2] für Javascript-basierte Feature Detection
-     - [jQuery][3] für Element-Selektion und -Manipulation
-     - [MediaCheck][4] für Code-Ausführung beim Betreten und Verlassen von Responsive Breakpoints
+     - [yepnope.js][5] für asynchrones Laden von Ressourcen
+     - [Modernizr][6] für Javascript-basierte Feature Detection
+     - [jQuery][7] für Element-Selektion und -Manipulation
+     - [MediaCheck][8] für Code-Ausführung beim Betreten und Verlassen von Responsive Breakpoints
  - Diese vier Skripte stellen die Basis dar um sauber und strukturiert mit Javascript zu arbeiten, sollen aber im Produktiveinsatz nur dann auch geladen werden, wenn sie gebraucht werden
  - Beispiele zum Einsatz und zur Syntax von `yepnope.js` sind in der `scriptloader.js` vorhanden.
  - Für das Laden eigener Skripte gibt es in der `scriptloader.js` zwei Platzhalder
@@ -124,7 +142,11 @@ Einführung von `yepnope.js` als "conditional resource loader" zum besseren steu
      - Tiefergreifende Erklärungen zu Syntax und Einsatzzwecken der Tools finden sich auf den jeweiligen Homepages
 
 
-  [1]: http://yepnopejs.com/
-  [2]: http://modernizr.com/
-  [3]: http://jquery.com/
-  [4]: https://github.com/sparkbox/mediaCheck
+  [1]: http://neat.bourbon.io/
+  [2]: http://bourbon.io/
+  [3]: http://bourbon.io/docs/
+  [4]: http://neat.bourbon.io/docs/
+  [5]: http://yepnopejs.com/
+  [6]: http://modernizr.com/
+  [7]: http://jquery.com/
+  [8]: https://github.com/sparkbox/mediaCheck
