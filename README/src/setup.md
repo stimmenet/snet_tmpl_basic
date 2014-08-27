@@ -27,13 +27,9 @@ That's it, now you can use the new frontend baseline.
 
 There are two git repositories for using the new workflow. One is a complete TYPO3 Template Extension based on the established `snet_tmpl_basic` and as such, is a git branch of said extension. Type
 
-> `git clone git@biergit.intern.stimme.net:snet_tmpl_basic.git -b baseline_v2`
+> `git clone git@biergit.intern.stimme.net:snet_tmpl_basic.git`
 
-to clone a copy of the extension branch to the given folder. The other option is for creating pure HTML and CSS without any CMS specific files and configurations. Type
-
-> `YET TO COME`
-
-to clone this repository. The following instructions work for either repositories.
+to clone a copy of the extension branch to the given folder.
 
 Now, navigate inside the repository you just cloned and call
 
@@ -47,6 +43,11 @@ This command will automatically install all needed plugins for node.js, which ar
 * `grunt-contrib-cssmin`, to minimize css files
 * `grunt-autoprefixer`, to add vendor prefixescss to css attributes
 * `grunt-markdown`, to convert markdown files to html files
+* `grunt-image`, for image optimization
+* `node-neat`, a Sass grid library
+* and some other plugins that help executing the above plugins in a improved way
+
+If you get an error message `ENOENT` when trying to call `npm install`, the command `npm update -g` should help.
 
 To make grunt start watching your project, just type
 

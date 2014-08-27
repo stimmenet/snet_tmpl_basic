@@ -136,7 +136,7 @@ Einführung von `yepnope.js` als "conditional resource loader" zum besseren steu
      - [MediaCheck][8] für Code-Ausführung beim Betreten und Verlassen von Responsive Breakpoints
  - Diese vier Skripte stellen die Basis dar um sauber und strukturiert mit Javascript zu arbeiten, sollen aber im Produktiveinsatz nur dann auch geladen werden, wenn sie gebraucht werden
  - Beispiele zum Einsatz und zur Syntax von `yepnope.js` sind in der `scriptloader.js` vorhanden.
- - Für das Laden eigener Skripte gibt es in der `scriptloader.js` zwei Platzhalder
+ - Für das Laden eigener Skripte gibt es in der `scriptloader.js` zwei Platzhalter
      - `PLACEHOLDER 1` wird genutzt, wenn das jeweilige Skript so bald wie möglich im Seiten-Lade-Vorgang geladen werden und zur Verfügung stehen soll
      - `PLACEHOLDER 2` wird genutzt, wenn das jeweilige Skript erst nach erfolgreichem Seiten-Lade-Vorgang geladen und zur Verfügung stehen soll bzw. kann
      - Tiefergreifende Erklärungen zu Syntax und Einsatzzwecken der Tools finden sich auf den jeweiligen Homepages

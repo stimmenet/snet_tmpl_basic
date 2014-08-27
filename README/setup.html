@@ -30,13 +30,9 @@
 <h2 id="setting-up-a-new-project">Setting up a new Project</h2>
 <p>There are two git repositories for using the new workflow. One is a complete TYPO3 Template Extension based on the established <code>snet_tmpl_basic</code> and as such, is a git branch of said extension. Type</p>
 <blockquote>
-<p><code>git clone git@biergit.intern.stimme.net:snet_tmpl_basic.git -b baseline_v2</code></p>
+<p><code>git clone git@biergit.intern.stimme.net:snet_tmpl_basic.git</code></p>
 </blockquote>
-<p>to clone a copy of the extension branch to the given folder. The other option is for creating pure HTML and CSS without any CMS specific files and configurations. Type</p>
-<blockquote>
-<p><code>YET TO COME</code></p>
-</blockquote>
-<p>to clone this repository. The following instructions work for either repositories.</p>
+<p>to clone a copy of the extension branch to the given folder.</p>
 <p>Now, navigate inside the repository you just cloned and call</p>
 <blockquote>
 <p><code>npm install</code></p>
@@ -49,7 +45,11 @@
 <li><code>grunt-contrib-cssmin</code>, to minimize css files</li>
 <li><code>grunt-autoprefixer</code>, to add vendor prefixescss to css attributes</li>
 <li><code>grunt-markdown</code>, to convert markdown files to html files</li>
+<li><code>grunt-image</code>, for image optimization</li>
+<li><code>node-neat</code>, a Sass grid library</li>
+<li>and some other plugins that help executing the above plugins in a improved way</li>
 </ul>
+<p>If you get an error message <code>ENOENT</code> when trying to call <code>npm install</code>, the command <code>npm update -g</code> should help.</p>
 <p>To make grunt start watching your project, just type</p>
 <blockquote>
 <p><code>grunt</code></p>
