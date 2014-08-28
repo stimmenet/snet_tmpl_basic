@@ -123,12 +123,12 @@
 <p>eine Spaltigkeit zuweisen. Für das Definieren einer Spalte innerhalb einer Spalte in der richtigen Breite gibt es ebenfalls einen Aufruf:</p>
 <pre><code>@include span-columns(KIND-SPALTENZAHL of ELTERN-SPALTENZAHL);</code></pre>
 <p>Sowohl Bourbon als auch Neat besitzen natürlich eine Vielzahl weiterer Mixins und Funktionen, die ebenfalls benutzt werden können, hierfür lohnt sich ein Blick in die jeweiligen Dokumentationen (<a href="http://bourbon.io/docs/">Bourbon</a>, <a href="http://neat.bourbon.io/docs/">Neat</a>).</p>
+<h2 id="css-minimierung">CSS-Minimierung</h2>
+<p>Beim Ändern bzw. Speichern von scss-Dateien generiert grunt automatisch eine minimierte Version aller aus Sass generierten CSS Dateien. Diese werden im Ordner <code>Resources/Public/Styles/css/</code> abgelegt. Dieser Pfad wird auch für die TS-Konstante <code>$snet_tmpl_basic.cssRootPath</code> verwendet. Aus Performancegründen sollten im Produktiveinsatz grundsätzlich die minimierten Dateien zum Einsatz kommen.</p>
+<p>Dank der Sourcemaps sind die minimierten Dateien trotzdem auch zum Debuggen und Testen geeignet (siehe unten).</p>
 <h2 id="css-source-maps">CSS Source Maps</h2>
 <p>Die aus den Sass-Dateien generierten CSS-Files werden im Ordner <code>Resources/Public/Styles/css/</code> abgelegt. Dank der CSS Source Maps kann man trotz Nutzung der generierten CSS-Dateien direkt im Browser prüfen, aus welcher Sass-Datei genau welche Styleregel stammt.</p>
 <p>Diese Funktion kann in aktuellen Versionen der Browser <code>Chrome</code> und <code>Firefox</code> genutzt werden. Dazu muss man lediglich die Developer Tools (Taste <code>F12</code>) öffnen und in den Einstellungen die Source Maps aktivieren. Anschließend kann man über den Inspektor direkt die Herkunft der Styleregeln aus den Sass-Dateien einsehen.</p>
-<h2 id="css-minimierung">CSS-Minimierung</h2>
-<p>Beim Ändern bzw. Speichern von scss-Dateien generiert grunt automatisch eine minimierte Version aller aus Sass generierten CSS Dateien. Diese werden im Ordner <code>Resources/Public/Styles/min/</code>abgelegt. Dieser Pfad wird auch für die TS-Konstante <code>$snet_tmpl_basic.cssRootPath</code> verwendet. Aus Performancegründen sollten im Produktiveinsatz grundsätzlich die minimierten Dateien zum Einsatz kommen.</p>
-<p>Um dennoch nicht auf die für die Entwicklung sehr praktischen Source Maps zu verzichten, wurde eine Condition eingebaut, die die oben genannte Konstante mit dem Pfad <code>Resources/Public/Styles/css/</code> überschreibt, sobald der GET-Parameter <code>devmode</code> gesetzt ist. Um die CSS Source Maps zu nutzen muss also einfach <code>&amp;devmode=1</code> bzw. <code>?devmode=1</code>an die URL der zu testenden Seite angehängt werden.</p>
 <h2 id="javascript-loading">Javascript-Loading</h2>
 <p>Einführung von <code>yepnope.js</code> als &quot;conditional resource loader&quot; zum besseren steuern, welches Skript wann in welcher Abhängigkeit geladen werden soll.</p>
 <ul>

@@ -23,6 +23,9 @@ module.exports = function(grunt) {
 			}
 		},
         autoprefixer: {
+            options: {
+                map: true
+            },
             dist: {
                 files: [
                     {
@@ -34,14 +37,21 @@ module.exports = function(grunt) {
                 ]
             }
         },
-		cssmin : {
-            minify: {
-                expand: true,
-                cwd: 'Resources/Public/Styles/css/',
-                src: ['**/*.css'],
-                dest: 'Resources/Public/Styles/min/',
-                ext: '.css'
-            }
+        csswring: {
+            options: {
+                map: true
+            },
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'Resources/Public/Styles/css/',
+                        src: ['**/*.css'],
+                        dest: 'Resources/Public/Styles/css/',
+                        ext: '.css'
+                    }
+                ]
+            },
         },
         image: {
             dynamic: {
@@ -77,7 +87,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
                 files: '**/*.scss',
-                tasks: ['sass', 'autoprefixer', 'cssmin']
+                tasks: ['sass', 'autoprefixer', 'csswring']
             },
             markdown: {
 				files: '**/*.md',
@@ -91,8 +101,8 @@ module.exports = function(grunt) {
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-markdown');
+    grunt.loadNpmTasks('grunt-csswring');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-image');
     grunt.loadNpmTasks('grunt-newer');
