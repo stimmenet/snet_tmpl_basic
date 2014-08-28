@@ -19,7 +19,13 @@ After that, you can install Sass, which is a Gem for Ruby. Type
 
 into your terminal window, Sass will be installed automatically. After the installation process, you can type `sass -v` to get the Sass version number and see if the installation was successful. You will need Sass version of `3.3` or higher to make use of CSS Source Maps, but since Sass is currently at version 3.3.7, there won't be a problem here.
 
-Last, you need to have node.js installed. Get your installer from the official [website][3] and follow the instructions to get node running for your system. Again, you can check with `node -v` if everything went smoothly.
+Afterwards, you need to have node.js installed. Get your installer from the official [website][3] and follow the instructions to get node running for your system. Again, you can check with `node -v` if everything went smoothly.
+
+Last, `grunt-cli`, the command line interface for grunt has to be installed. Type
+
+> `npm install -g grunt-cli`
+
+into your terminal window and grunt-cli will be installed globally. To check if the installation was successful, use the command `grunt --version`.
 
 That's it, now you can use the new frontend baseline.
 
@@ -40,7 +46,7 @@ This command will automatically install all needed plugins for node.js, which ar
 * `grunt`, for automated tasks (see below)
 * `grunt-contrib-watch`, to watch and react, if a file changes
 * `grunt-contrib-sass`, to convert .scss files to .css files
-* `grunt-contrib-cssmin`, to minimize css files
+* `grunt-csswring`, to minimize css files
 * `grunt-autoprefixer`, to add vendor prefixescss to css attributes
 * `grunt-markdown`, to convert markdown files to html files
 * `grunt-image`, for image optimization
@@ -54,6 +60,8 @@ To make grunt start watching your project, just type
 > `grunt`
 
 in your terminal window while being in the root directory of your project. Now, whenever you change a `.scss` file within the `Resources/Public/Styles/sass/`, grunt recognizes this, (re-) compiles your `.scss` files to `.css` files and automatically adds browser prefixes if neccessary. Additionally, all .md files within the `README/src/` folder will be converted to .html files.
+
+Please be aware that if the `package.json` did change, for example with a new commit, you most likely have to run `npm install` again, to install all newly added dependencies.
 
 
   [1]: http://git-scm.com/downloads

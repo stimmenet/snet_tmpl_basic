@@ -25,7 +25,12 @@
 <p><code>gem install sass</code></p>
 </blockquote>
 <p>into your terminal window, Sass will be installed automatically. After the installation process, you can type <code>sass -v</code> to get the Sass version number and see if the installation was successful. You will need Sass version of <code>3.3</code> or higher to make use of CSS Source Maps, but since Sass is currently at version 3.3.7, there won&#39;t be a problem here.</p>
-<p>Last, you need to have node.js installed. Get your installer from the official <a href="http://nodejs.org/">website</a> and follow the instructions to get node running for your system. Again, you can check with <code>node -v</code> if everything went smoothly.</p>
+<p>Afterwards, you need to have node.js installed. Get your installer from the official <a href="http://nodejs.org/">website</a> and follow the instructions to get node running for your system. Again, you can check with <code>node -v</code> if everything went smoothly.</p>
+<p>Last, <code>grunt-cli</code>, the command line interface for grunt has to be installed. Type</p>
+<blockquote>
+<p><code>npm install -g grunt-cli</code></p>
+</blockquote>
+<p>into your terminal window and grunt-cli will be installed globally. To check if the installation was successful, use the command <code>grunt --version</code>.</p>
 <p>That&#39;s it, now you can use the new frontend baseline.</p>
 <h2 id="setting-up-a-new-project">Setting up a new Project</h2>
 <p>There are two git repositories for using the new workflow. One is a complete TYPO3 Template Extension based on the established <code>snet_tmpl_basic</code> and as such, is a git branch of said extension. Type</p>
@@ -42,7 +47,7 @@
 <li><code>grunt</code>, for automated tasks (see below)</li>
 <li><code>grunt-contrib-watch</code>, to watch and react, if a file changes</li>
 <li><code>grunt-contrib-sass</code>, to convert .scss files to .css files</li>
-<li><code>grunt-contrib-cssmin</code>, to minimize css files</li>
+<li><code>grunt-csswring</code>, to minimize css files</li>
 <li><code>grunt-autoprefixer</code>, to add vendor prefixescss to css attributes</li>
 <li><code>grunt-markdown</code>, to convert markdown files to html files</li>
 <li><code>grunt-image</code>, for image optimization</li>
@@ -55,6 +60,7 @@
 <p><code>grunt</code></p>
 </blockquote>
 <p>in your terminal window while being in the root directory of your project. Now, whenever you change a <code>.scss</code> file within the <code>Resources/Public/Styles/sass/</code>, grunt recognizes this, (re-) compiles your <code>.scss</code> files to <code>.css</code> files and automatically adds browser prefixes if neccessary. Additionally, all .md files within the <code>README/src/</code> folder will be converted to .html files.</p>
+<p>Please be aware that if the <code>package.json</code> did change, for example with a new commit, you most likely have to run <code>npm install</code> again, to install all newly added dependencies.</p>
 
 </div></body>
 </html>
