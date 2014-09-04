@@ -72,10 +72,6 @@ snet_tmpl_basic {
 		# customsubcategory=pageuid=PID Werte
 		# cat=SNET Basic Template/pageuid/0010; type=int+; label= Funktionsseite Footer
 		footerPid = 9
-
-		# customsubcategory=pageuid=PID Werte
-		# cat=SNET Basic Template/pageuid/0010; type=int+; label= Home-Seite des Auftritts
-		startPid = 2
 	}
 
 	helper.mwUrlString = mittwaldserver.info
