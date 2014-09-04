@@ -38,7 +38,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'gridelements' => '3.0.0',
 			'news' => '3.0.1',
 			'realurl' => '1.12.8',
-			'tq_seo' => '6.0.1',
+			'metaseo' => '1.0.2',
 			'wt_spamshield' => '1.2.1'
 		),
 		'conflicts' => array(
