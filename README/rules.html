@@ -130,26 +130,21 @@
 <p>Die aus den Sass-Dateien generierten CSS-Files werden im Ordner <code>Resources/Public/Styles/css/</code> abgelegt. Dank der CSS Source Maps kann man trotz Nutzung der generierten CSS-Dateien direkt im Browser prüfen, aus welcher Sass-Datei genau welche Styleregel stammt.</p>
 <p>Diese Funktion kann in aktuellen Versionen der Browser <code>Chrome</code> und <code>Firefox</code> genutzt werden. Dazu muss man lediglich die Developer Tools (Taste <code>F12</code>) öffnen und in den Einstellungen die Source Maps aktivieren. Anschließend kann man über den Inspektor direkt die Herkunft der Styleregeln aus den Sass-Dateien einsehen.</p>
 <h2 id="javascript-loading">Javascript-Loading</h2>
-<p>Einführung von <code>yepnope.js</code> als &quot;conditional resource loader&quot; zum besseren steuern, welches Skript wann in welcher Abhängigkeit geladen werden soll.</p>
+<p>Einführung von <code>headjs</code> als &quot;conditional resource loader&quot; zum besseren steuern, welches Skript wann in welcher Abhängigkeit geladen werden soll.</p>
 <ul>
-<li>Über TYPOSCRIPT werden nur noch <code>yepnope.js</code> selbst und die Datei <code>scriptloader.js</code> geladen, die als Einstieg dienen.</li>
+<li>Über TYPOSCRIPT werden nur noch <code>headjs</code> selbst und die Datei <code>scriptloader.js</code> geladen, die als Einstieg dienen.</li>
 <li>In der <code>scriptloader.js</code> werden alle nötigen weiteren Skripte geladen und definiert.</li>
 <li>Das &quot;herkömmliche Laden&quot; von CSS-Dateien und Skripten aus Extensions (z.B. Powermail) wird, sofern möglich, über TYPOSCRIPT vollständig deaktiviert, stattdessen werden die Skripte über die  <code>scriptloader.js</code> Datei eingebaut</li>
 <li>Das Grundgerüst des neuen Workflows besteht aus 4 Skripten<ul>
-<li><a href="http://yepnopejs.com/">yepnope.js</a> für asynchrones Laden von Ressourcen</li>
+<li><a href="http://headjs.com/">headjs</a> für asynchrones Laden von Ressourcen</li>
 <li><a href="http://modernizr.com/">Modernizr</a> für Javascript-basierte Feature Detection</li>
 <li><a href="http://jquery.com/">jQuery</a> für Element-Selektion und -Manipulation</li>
 <li><a href="https://github.com/sparkbox/mediaCheck">MediaCheck</a> für Code-Ausführung beim Betreten und Verlassen von Responsive Breakpoints</li>
 </ul>
 </li>
 <li>Diese vier Skripte stellen die Basis dar um sauber und strukturiert mit Javascript zu arbeiten, sollen aber im Produktiveinsatz nur dann auch geladen werden, wenn sie gebraucht werden</li>
-<li>Beispiele zum Einsatz und zur Syntax von <code>yepnope.js</code> sind in der <code>scriptloader.js</code> vorhanden.</li>
-<li>Für das Laden eigener Skripte gibt es in der <code>scriptloader.js</code> zwei Platzhalter<ul>
-<li><code>PLACEHOLDER 1</code> wird genutzt, wenn das jeweilige Skript so bald wie möglich im Seiten-Lade-Vorgang geladen werden und zur Verfügung stehen soll</li>
-<li><code>PLACEHOLDER 2</code> wird genutzt, wenn das jeweilige Skript erst nach erfolgreichem Seiten-Lade-Vorgang geladen und zur Verfügung stehen soll bzw. kann</li>
-<li>Tiefergreifende Erklärungen zu Syntax und Einsatzzwecken der Tools finden sich auf den jeweiligen Homepages</li>
-</ul>
-</li>
+<li>Einige Beispiele zum Einsatz und zur Syntax von <code>headjs</code> sind in der <code>scriptloader.js</code> vorhanden.</li>
+<li>Tiefergreifende Erklärungen zu Syntax und Einsatzzwecken der jeweiligen Tools finden sich auf den jeweiligen Homepages</li>
 </ul>
 
 </div></body>

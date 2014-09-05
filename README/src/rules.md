@@ -124,29 +124,26 @@ Diese Funktion kann in aktuellen Versionen der Browser `Chrome` und `Firefox` ge
 
 ## Javascript-Loading ##
 
-Einführung von `yepnope.js` als "conditional resource loader" zum besseren steuern, welches Skript wann in welcher Abhängigkeit geladen werden soll.
+Einführung von `headjs` als "conditional resource loader" zum besseren steuern, welches Skript wann in welcher Abhängigkeit geladen werden soll.
 
- - Über TYPOSCRIPT werden nur noch `yepnope.js` selbst und die Datei `scriptloader.js` geladen, die als Einstieg dienen.
+ - Über TYPOSCRIPT werden nur noch `headjs` selbst und die Datei `scriptloader.js` geladen, die als Einstieg dienen.
  - In der `scriptloader.js` werden alle nötigen weiteren Skripte geladen und definiert.
  - Das "herkömmliche Laden" von CSS-Dateien und Skripten aus Extensions (z.B. Powermail) wird, sofern möglich, über TYPOSCRIPT vollständig deaktiviert, stattdessen werden die Skripte über die  `scriptloader.js` Datei eingebaut
  - Das Grundgerüst des neuen Workflows besteht aus 4 Skripten
-     - [yepnope.js][5] für asynchrones Laden von Ressourcen
+     - [headjs][5] für asynchrones Laden von Ressourcen
      - [Modernizr][6] für Javascript-basierte Feature Detection
      - [jQuery][7] für Element-Selektion und -Manipulation
      - [MediaCheck][8] für Code-Ausführung beim Betreten und Verlassen von Responsive Breakpoints
  - Diese vier Skripte stellen die Basis dar um sauber und strukturiert mit Javascript zu arbeiten, sollen aber im Produktiveinsatz nur dann auch geladen werden, wenn sie gebraucht werden
- - Beispiele zum Einsatz und zur Syntax von `yepnope.js` sind in der `scriptloader.js` vorhanden.
- - Für das Laden eigener Skripte gibt es in der `scriptloader.js` zwei Platzhalter
-     - `PLACEHOLDER 1` wird genutzt, wenn das jeweilige Skript so bald wie möglich im Seiten-Lade-Vorgang geladen werden und zur Verfügung stehen soll
-     - `PLACEHOLDER 2` wird genutzt, wenn das jeweilige Skript erst nach erfolgreichem Seiten-Lade-Vorgang geladen und zur Verfügung stehen soll bzw. kann
-     - Tiefergreifende Erklärungen zu Syntax und Einsatzzwecken der Tools finden sich auf den jeweiligen Homepages
+ - Einige Beispiele zum Einsatz und zur Syntax von `headjs` sind in der `scriptloader.js` vorhanden.
+ - Tiefergreifende Erklärungen zu Syntax und Einsatzzwecken der jeweiligen Tools finden sich auf den jeweiligen Homepages
 
 
   [1]: http://neat.bourbon.io/
   [2]: http://bourbon.io/
   [3]: http://bourbon.io/docs/
   [4]: http://neat.bourbon.io/docs/
-  [5]: http://yepnopejs.com/
+  [5]: http://headjs.com/
   [6]: http://modernizr.com/
   [7]: http://jquery.com/
   [8]: https://github.com/sparkbox/mediaCheck

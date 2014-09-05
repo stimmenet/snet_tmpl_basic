@@ -1,6 +1,3 @@
-lib.test = TEXT
-lib.test.value = Hello Fluidworld
-
 page {
 	10 = FLUIDTEMPLATE
 	10 {
@@ -9,7 +6,6 @@ page {
 		partialRootPath = {$snet_tmpl_basic.partialRootPath}/
 
 		variables {
-			testValue < lib.test
 			metanav < lib.menuMeta
 			mainnav < lib.menuMain
 			subnav < lib.menuSub
