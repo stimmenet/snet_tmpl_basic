@@ -1,5 +1,5 @@
 # example for startPage
-#[globalVar = TSFE:id = {$snet_tmpl_basic.pid.startPid}]
+#[globalVar = TSFE:id = {$snet_tmpl_basic.pid.rootPage}]
 	#i.e. set another headerimg
 #[global]
 

@@ -31,7 +31,13 @@ snet_tmpl_basic {
 		# cat=SNET Basic Template/basic/007; type=boolean; label= Admin-Panel: CAdmin-Panel im FE aktivieren - default Off
 		admPanel = 0
 	}
-
+	
+	# customsubcategory=meta=Meta Settings
+	meta {
+		# cat=SNET Basic Template/meta/001; type=sting; label= Google Webmastercode
+		googleWebmastercode = 
+	}
+	
 	# cat=SNET Basic Template/dims/002; type=int+; label= Maximale Headerbreite
 	dims.headerMaxWidth = 900
 
@@ -66,10 +72,6 @@ snet_tmpl_basic {
 		# customsubcategory=pageuid=PID Werte
 		# cat=SNET Basic Template/pageuid/0010; type=int+; label= Funktionsseite Footer
 		footerPid = 9
-
-		# customsubcategory=pageuid=PID Werte
-		# cat=SNET Basic Template/pageuid/0010; type=int+; label= Home-Seite des Auftritts
-		startPid = 2
 	}
 
 	helper.mwUrlString = mittwaldserver.info

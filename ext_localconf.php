@@ -26,7 +26,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array (
 			array(
 				'GETvar' => 'L',
 				'valueMap' => array(
-					'de' => '0',
+					'' => '0',
 					'en' => '1',
 				),
 				'valueDefault' => 'de',
