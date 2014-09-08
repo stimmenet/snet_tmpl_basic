@@ -32,12 +32,6 @@ snet_tmpl_basic {
 		admPanel = 0
 	}
 	
-	# customsubcategory=meta=Meta Settings
-	meta {
-		# cat=SNET Basic Template/meta/001; type=sting; label= Google Webmastercode
-		googleWebmastercode = 
-	}
-	
 	# cat=SNET Basic Template/dims/002; type=int+; label= Maximale Headerbreite
 	dims.headerMaxWidth = 900
 

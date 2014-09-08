@@ -3,11 +3,6 @@ page {
 	typeNum = 0
 	bodyTag = <body>
 
-	### META ###
-	meta {
-		google-site-verification = {$snet_tmpl_basic.meta.googleWebmastercode}
-	}
-
 	includeCSS.styles = {$snet_tmpl_basic.cssRootPath}/pages/main.css
 
 	includeJS {
