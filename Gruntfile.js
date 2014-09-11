@@ -53,6 +53,33 @@ module.exports = function(grunt) {
                 ]
             },
         },
+        jshint: {
+            options: {
+                strict: false,
+                browser: true,
+                devel: true,
+                multistr: true,
+                evil: true,
+                reporter: require('jshint-stylish')
+            },
+            dist: {
+                src: ['Resources/Public/Scripts/JS/src/internal/**/*.js'],
+            }
+        },
+        uglify: {
+            dist: {
+                options: {
+                    sourceMap: true,
+                    mangle: false
+                },
+                files: [{
+                    expand: true,
+                    src: 'Resources/Public/Scripts/JS/src/**/*.js',
+                    dest: 'Resources/Public/Scripts/JS/dist/',
+                    flatten: true
+                }]
+            }
+        },
         image: {
             dynamic: {
                 files: [{
@@ -96,6 +123,10 @@ module.exports = function(grunt) {
             imagemin: {
                 files: 'Resources/Public/Images/src/**/*.{png,jpg,gif,ico}',
                 tasks: ['newer:image:dynamic', 'delete_sync']
+            },
+            js: {
+                files: 'Resources/Public/Scripts/JS/src/**/*.js',
+                tasks: ['jshint', 'uglify']
             }
 		}
 	});
@@ -107,5 +138,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-image');
     grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-delete-sync');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.registerTask('default',['watch']);
 }

@@ -17,6 +17,9 @@
     "grunt-image": "~0.8.1",
     "grunt-newer": "~0.7.0",
     "grunt-delete-sync": "0.0.2",
-    "grunt-csswring": "~1.0.0"
+    "grunt-csswring": "~1.0.0",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "jshint-stylish": "~0.4.0"
   }
 }

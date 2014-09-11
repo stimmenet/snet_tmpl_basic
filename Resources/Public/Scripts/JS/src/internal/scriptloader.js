@@ -17,19 +17,23 @@ head.load([
     // Modernizr / Javascript feature detection / development use only, for production use a custom build / <http://modernizr.com/>
     { modernizr:    '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js' },
     // MediaCheck / run code on entry and exit from media queries / use only if website has responsive styles / <https://github.com/sparkbox/mediaCheck>
-    { mediacheck:   snet.jsRootPath + '/mediaCheck/mediaCheck.min.js'}
+    { mediacheck:   snet.jsRootPath + '/mediaCheck.js'}
 ]);
 
 // Load and execute after document is ready
 head.ready(document, function(){
-    head.ready(["jquery", "modernizr", "mediacheck"], function(){
+    head.ready(["jquery"], function(){
         // Swipebox / a simple lightbox / <http://brutaldesign.github.io/swipebox/>
         if (jQuery('a.lightbox, div.mediaelement-image > a').length > 0) {
             head.load([
-                snet.cssRootPath + '/vendor/Swipebox/swipebox.css',
-                { swipebox: snet.jsRootPath + '/Swipebox/jquery.swipebox.min.js' },
-                snet.jsRootPath + '/Swipebox/enable_swipebox.js'
-            ]);
+                snet.cssRootPath + '/vendor/Swipebox/styles/swipebox.css',
+                { swipebox: snet.jsRootPath + '/jquery.swipebox.js' },
+            ], function() {
+                jQuery('a.lightbox, div.mediaelement-image > a').swipebox({
+                    useCSS : true,      // false will force the use of jQuery for animations
+                    hideBarsDelay : 0   // 0 to always show caption and action bar
+                });
+            });
         }
     });
 });

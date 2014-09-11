@@ -31,13 +31,13 @@ snet_tmpl_basic {
 		# cat=SNET Basic Template/basic/007; type=boolean; label= Admin-Panel: CAdmin-Panel im FE aktivieren - default Off
 		admPanel = 0
 	}
-	
+
 	# customsubcategory=meta=Meta Settings
 	meta {
 		# cat=SNET Basic Template/meta/001; type=sting; label= Google Webmastercode
-		googleWebmastercode = 
+		googleWebmastercode =
 	}
-	
+
 	# cat=SNET Basic Template/dims/002; type=int+; label= Maximale Headerbreite
 	dims.headerMaxWidth = 900
 
@@ -89,10 +89,10 @@ snet_tmpl_basic {
 	cssRootPath = EXT:snet_tmpl_basic/Resources/Public/Styles/css
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den Images
-	imgRootPath = EXT:snet_tmpl_basic/Resources/Public/Images/src
+	imgRootPath = EXT:snet_tmpl_basic/Resources/Public/Images/dist
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den JS-Dateien
-	jsRootPath = EXT:snet_tmpl_basic/Resources/Public/Scripts/JS
+	jsRootPath = EXT:snet_tmpl_basic/Resources/Public/Scripts/JS/dist
 
 #	# cat=SNET Basic Template/file; type=string; label= Pfad zu den PHP-Dateien
 	phpRootPath = EXT:snet_tmpl_basic/Resources/Public/Scripts/PHP
