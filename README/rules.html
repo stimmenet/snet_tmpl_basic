@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Readme</title>
 <link rel="stylesheet" href="https://stackedit.io/res-min/themes/night.css" />
-<script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body><div class="container"><h1 id="snet-fe-baseline-20">
 <h1 id="regeln-f-r-snet_febaseline">Regeln für snet_feBaseline</h1>
@@ -145,6 +145,21 @@
 <li>Diese vier Skripte stellen die Basis dar um sauber und strukturiert mit Javascript zu arbeiten, sollen aber im Produktiveinsatz nur dann auch geladen werden, wenn sie gebraucht werden</li>
 <li>Einige Beispiele zum Einsatz und zur Syntax von <code>headjs</code> sind in der <code>scriptloader.js</code> vorhanden.</li>
 <li>Tiefergreifende Erklärungen zu Syntax und Einsatzzwecken der jeweiligen Tools finden sich auf den jeweiligen Homepages</li>
+</ul>
+<h2 id="javascript-optimierung">Javascript-Optimierung</h2>
+<p>Auch Javascript-Dateien werden künftig mithilfe von <code>grunt</code> verarbeitet und optimiert. Dazu gibt es eine neue Ordnerstruktur: Der Ordner <code>Resources/Public/Scripts/JS/src/</code> enthält alle unverarbeiteten Dateien, wogegen der Ordner <code>Resources/Public/Scripts/JS/dist/</code> die optimierten Javascripte beinhaltet und daher auch zum Laden von Javascript-Dateien im Live-Betrieb verwendet werden sollte. Der <code>src</code> Ordner unterteilt sich in zwei Unterordner:  Im Ordner <code>external</code> sollten alle externen Skripte und Ressourcen wie Lightboxen, Slider, Polyfills o.ä. gespeichert werden, der Ordner <code>internal</code> ist für eigene, manuelle Javascript-Entwicklungen gedacht.</p>
+<p>Grunt überwacht beide Ordner. Sobald eine Javascript-Datei geändert wurde, werden zunächst alle .js Dateien im Ordner <code>internal</code> mithilfe von <a href="http://www.jshint.com/"><code>jshint</code></a> auf syntaktische Fehler und Probleme überprüft. Nur wenn bei dieser Prüfung keine Fehler erkannt wurden, werden im nächsten Schritt alle .ja Dateien aus <code>internal</code> und <code>external</code> minimiert und mit Source Maps im Ordner <code>Resources/Public/JS/dist</code> gespeichert. Ähnlich wie bei den CSS Source Maps kann hier über die Browser Developer Tools trotz Minimierung eine Verknüpfung zu den Original-Dateien  hergestellt werden.</p>
+<p>Da die Dateien, auch externe, ohnehin minimiert werden, können bzw. sollten externe Plugins und Skripte zur besseren Einsicht und Nachvollziehbarkeit unminimiert in den <code>src</code> Ordner gespeichert werden.</p>
+<h2 id="bild-optimierung">Bild-Optimierung</h2>
+<p>Für das Seitenlayout oder CSS verwendete Bilder werden künftig in den Ordner <code>Resources/Public/Images/src/</code> gespeichert. Mithilfe von grunt werden diese Bilder bei einer Änderung automatisch verlustfrei optimiert und im Ordner <code>Resources/Public/Images/dist/</code> abgelegt. Dieser Ordner wird für die Einbindung der Bilder auf der Seite verwendet. Durch die automatische Bildoptimierung werden die Dateigrößen signifikant verringert.</p>
+<h2 id="tipps">Tipps</h2>
+<ul>
+<li>Externe Skripte sollten, sofern möglich, von einem CDN geladen werden. Gute Anlaufstellen hierfür sind <a href="https://developers.google.com/speed/libraries/devguide?hl=de">Google Hosted Libraries</a> oder <a href="http://de.cdnjs.com/">cdnjs</a></li>
+<li>Bei der Einbindung von Ressourcen (egal ob CSS, Javascript oder Bilder) von einem anderen Server sollten immer <a href="http://www.paulirish.com/2010/the-protocol-relative-url/">protokoll-relative URLs</a> benutzt werden</li>
+<li>Damit die TYPOSCRIPT-Konstanten <code>{$snet_tmpl_basic.jsRootPath}</code> und <code>{$snet_tmpl_basic.cssRootPath}</code> auch in Javascript genutzt werden können, stehen diese dort als die Variablen <code>snet.cssRootPath</code> und <code>snet.jsRootPath</code> zur Verfügung.</li>
+<li>Zudem kann die Funktion <code>snet.resolveExtPath(PATH)</code> dazu verwendet werden, um aus einer in TYPO3-üblichen Pfadangabe <code>EXT:extensionname/pfad/zur/datei.endung</code> das <code>EXT:</code> durch <code>/typo3conf/ext/</code> zu ersetzen.</li>
+<li>Falls es aufgrund anderer Skripte zu Kompatibilitätsproblemen mit der von <code>headjs</code> benutzten Variable <code>head</code> geben sollte, lässt sich diese über das <a href="http://headjs.com/site/api/v1.00.html#configuration">Konfigurations-Objekt</a> auch jederzeit umbenennen (in z.B. <code>headjs</code>). Allerdings muss danach darauf geachtet werden dass alle Funktionsaufrufe von <code>headjs</code> ebenfalls umbenannt werden.</li>
+<li>Das grunt-Plugin <code>uglify</code> ist, falls gewünscht, auch in der Lage, mehrere Javascript-Dateien zu einer einzigen zu mergen, um damit die Seiten-Performance weiter zu steigern. Dazu lohnt sich ein Blick auf die <a href="https://github.com/gruntjs/grunt-contrib-uglify">Dokumentation</a> des Tools.</li>
 </ul>
 
 </div></body>

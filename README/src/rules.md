@@ -94,7 +94,7 @@
 
 ## CSS Grid ##
 
-Mit [Neat][1] wurde ein neues Grid-System eingeführt. Neat ist eine leichtgewichtige Sammlung an Mixins und Variablen für Sass und basiert auf [Bourbon][2], ebenfalls eine Mixin-Sammlung für Sass.
+Mit [Neat](http://neat.bourbon.io/) wurde ein neues Grid-System eingeführt. Neat ist eine leichtgewichtige Sammlung an Mixins und Variablen für Sass und basiert auf [Bourbon](http://bourbon.io/), ebenfalls eine Mixin-Sammlung für Sass.
 
 Die Installation der beiden Tools erfolgt automatisch mit dem Befehl `npm install` über das Node-Plugin `node-neat`, anschließend stehen die beiden Libraries ohne weiteres Zutun zur Verfügung.
 
@@ -108,7 +108,7 @@ eine Spaltigkeit zuweisen. Für das Definieren einer Spalte innerhalb einer Spal
 
     @include span-columns(KIND-SPALTENZAHL of ELTERN-SPALTENZAHL);
 
-Sowohl Bourbon als auch Neat besitzen natürlich eine Vielzahl weiterer Mixins und Funktionen, die ebenfalls benutzt werden können, hierfür lohnt sich ein Blick in die jeweiligen Dokumentationen ([Bourbon][3], [Neat][4]).
+Sowohl Bourbon als auch Neat besitzen natürlich eine Vielzahl weiterer Mixins und Funktionen, die ebenfalls benutzt werden können, hierfür lohnt sich ein Blick in die jeweiligen Dokumentationen ([Bourbon](http://bourbon.io/docs/), [Neat](http://neat.bourbon.io/docs/)).
 
 ## CSS-Minimierung ##
 
@@ -130,20 +130,31 @@ Einführung von `headjs` als "conditional resource loader" zum besseren steuern,
  - In der `scriptloader.js` werden alle nötigen weiteren Skripte geladen und definiert.
  - Das "herkömmliche Laden" von CSS-Dateien und Skripten aus Extensions (z.B. Powermail) wird, sofern möglich, über TYPOSCRIPT vollständig deaktiviert, stattdessen werden die Skripte über die  `scriptloader.js` Datei eingebaut
  - Das Grundgerüst des neuen Workflows besteht aus 4 Skripten
-     - [headjs][5] für asynchrones Laden von Ressourcen
-     - [Modernizr][6] für Javascript-basierte Feature Detection
-     - [jQuery][7] für Element-Selektion und -Manipulation
-     - [MediaCheck][8] für Code-Ausführung beim Betreten und Verlassen von Responsive Breakpoints
+     - [headjs](http://headjs.com/) für asynchrones Laden von Ressourcen
+     - [Modernizr](http://modernizr.com/) für Javascript-basierte Feature Detection
+     - [jQuery](http://jquery.com/) für Element-Selektion und -Manipulation
+     - [MediaCheck](https://github.com/sparkbox/mediaCheck) für Code-Ausführung beim Betreten und Verlassen von Responsive Breakpoints
  - Diese vier Skripte stellen die Basis dar um sauber und strukturiert mit Javascript zu arbeiten, sollen aber im Produktiveinsatz nur dann auch geladen werden, wenn sie gebraucht werden
  - Einige Beispiele zum Einsatz und zur Syntax von `headjs` sind in der `scriptloader.js` vorhanden.
  - Tiefergreifende Erklärungen zu Syntax und Einsatzzwecken der jeweiligen Tools finden sich auf den jeweiligen Homepages
 
+## Javascript-Optimierung ##
 
-  [1]: http://neat.bourbon.io/
-  [2]: http://bourbon.io/
-  [3]: http://bourbon.io/docs/
-  [4]: http://neat.bourbon.io/docs/
-  [5]: http://headjs.com/
-  [6]: http://modernizr.com/
-  [7]: http://jquery.com/
-  [8]: https://github.com/sparkbox/mediaCheck
+Auch Javascript-Dateien werden künftig mithilfe von `grunt` verarbeitet und optimiert. Dazu gibt es eine neue Ordnerstruktur: Der Ordner `Resources/Public/Scripts/JS/src/` enthält alle unverarbeiteten Dateien, wogegen der Ordner `Resources/Public/Scripts/JS/dist/` die optimierten Javascripte beinhaltet und daher auch zum Laden von Javascript-Dateien im Live-Betrieb verwendet werden sollte. Der `src` Ordner unterteilt sich in zwei Unterordner:  Im Ordner `external` sollten alle externen Skripte und Ressourcen wie Lightboxen, Slider, Polyfills o.ä. gespeichert werden, der Ordner `internal` ist für eigene, manuelle Javascript-Entwicklungen gedacht.
+
+Grunt überwacht beide Ordner. Sobald eine Javascript-Datei geändert wurde, werden zunächst alle .js Dateien im Ordner `internal` mithilfe von [`jshint`](http://www.jshint.com/) auf syntaktische Fehler und Probleme überprüft. Nur wenn bei dieser Prüfung keine Fehler erkannt wurden, werden im nächsten Schritt alle .ja Dateien aus `internal` und `external` minimiert und mit Source Maps im Ordner `Resources/Public/JS/dist` gespeichert. Ähnlich wie bei den CSS Source Maps kann hier über die Browser Developer Tools trotz Minimierung eine Verknüpfung zu den Original-Dateien  hergestellt werden.
+
+Da die Dateien, auch externe, ohnehin minimiert werden, können bzw. sollten externe Plugins und Skripte zur besseren Einsicht und Nachvollziehbarkeit unminimiert in den `src` Ordner gespeichert werden.
+
+## Bild-Optimierung ##
+
+Für das Seitenlayout oder CSS verwendete Bilder werden künftig in den Ordner `Resources/Public/Images/src/` gespeichert. Mithilfe von grunt werden diese Bilder bei einer Änderung automatisch verlustfrei optimiert und im Ordner `Resources/Public/Images/dist/` abgelegt. Dieser Ordner wird für die Einbindung der Bilder auf der Seite verwendet. Durch die automatische Bildoptimierung werden die Dateigrößen signifikant verringert.
+
+## Tipps ##
+
+- Externe Skripte sollten, sofern möglich, von einem CDN geladen werden. Gute Anlaufstellen hierfür sind [Google Hosted Libraries](https://developers.google.com/speed/libraries/devguide?hl=de) oder [cdnjs](http://de.cdnjs.com/)
+- Bei der Einbindung von Ressourcen (egal ob CSS, Javascript oder Bilder) von einem anderen Server sollten immer [protokoll-relative URLs](http://www.paulirish.com/2010/the-protocol-relative-url/) benutzt werden
+- Damit die TYPOSCRIPT-Konstanten `{$snet_tmpl_basic.jsRootPath}` und `{$snet_tmpl_basic.cssRootPath}` auch in Javascript genutzt werden können, stehen diese dort als die Variablen `snet.cssRootPath` und `snet.jsRootPath` zur Verfügung.
+- Zudem kann die Funktion `snet.resolveExtPath(PATH)` dazu verwendet werden, um aus einer in TYPO3-üblichen Pfadangabe `EXT:extensionname/pfad/zur/datei.endung` das `EXT:` durch `/typo3conf/ext/` zu ersetzen.
+- Falls es aufgrund anderer Skripte zu Kompatibilitätsproblemen mit der von `headjs` benutzten Variable `head` geben sollte, lässt sich diese über das [Konfigurations-Objekt](http://headjs.com/site/api/v1.00.html#configuration) auch jederzeit umbenennen (in z.B. `headjs`). Allerdings muss danach darauf geachtet werden dass alle Funktionsaufrufe von `headjs` ebenfalls umbenannt werden.
+- Das grunt-Plugin `uglify` ist, falls gewünscht, auch in der Lage, mehrere Javascript-Dateien zu einer einzigen zu mergen, um damit die Seiten-Performance weiter zu steigern. Dazu lohnt sich ein Blick auf die [Dokumentation](https://github.com/gruntjs/grunt-contrib-uglify) des Tools.
