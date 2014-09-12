@@ -11,10 +11,6 @@ plugin.metaseo {
   metaTags.description = INSERT DEFAULT DESCRIPTION
     # cat=plugin.metaseo.metaTags/page/02; type=string; label= Meta Keywords: Comma separated list of keywords.
   metaTags.keywords = INSERT DEFAULT KEYWORDS
-    # cat=plugin.metaseo.metaTags/page/03; type=string; label= Meta Copyright info: Copyright information (eg. "Me Myself and I, %YEAR%. All rights reserved.", %YEAR% will be substituted with the current year).
-  metaTags.copyright = INSERT DEFAULT COPYRIGHT
-    # cat=plugin.metaseo.metaTags/page/04; type=string; label= Meta Reply-to email: Enter the e-mail adress for contact issues
-  metaTags.email = info@stimme.net
     # cat=plugin.metaseo.metaTags/page/05; type=string; label= Meta Author: Enter name of author.
   metaTags.author = INSERT DEFAULT AUTHOR
     # cat=plugin.metaseo.metaTags/page/06; type=string; label= Meta Publisher: Enter name of publisher.
@@ -23,6 +19,18 @@ plugin.metaseo {
   metaTags.revisit = 30
     # cat=plugin.metaseo.metaTags/enable/28; type=boolean; label= Meta Description: Enable Dublin Core (DC.) metatags
   metaTags.enableDC  = 0
+
+  ### removed due to w3c-standards
+    # cat=plugin.metaseo.metaTags/page/03; type=string; label= Meta Copyright info: Copyright information (eg. "Me Myself and I, %YEAR%. All rights reserved.", %YEAR% will be substituted with the current year).
+  metaTags.copyright =
+    # cat=plugin.metaseo.metaTags/page/04; type=string; label= Meta Reply-to email: Enter the e-mail adress for contact issues
+  metaTags.email =
+    # cat=plugin.metaseo.metaTags/page/07; type=options[,Arabic=ar,Chinese=zh,Danish=dk,Dutch=nl,English=en,Finnish=fi,French=fr,German=de,Greek=el,Hebrew=he,Icelandic=is,Italian=it,Japanese=ja,Norwegian=no,Polish=pl,Portuguese=pt,Russian=ru,Spanish=es,Swedish=sv,Turkish=tr,Multi language=mul]; label= Meta Language: Select language of the content.
+  metaTags.language =
+    # cat=plugin.metaseo.metaTags/enable/20; type=boolean; label= Publish LastUpdate-Time: Should the crawler be informed about the time a page was last updated.
+  metaTags.useLastUpdate = 0
+    # cat=plugin.metaseo.metaTags/enable/21; type=boolean; label= Detect Language: Should the language information automatically be detected.
+  metaTags.useDetectLanguage = 0
 
     # cat=plugin.metaseo.services/page/02; type=string; label= Google Crawler Verification: Verification code for google webmaster tools
   metaTags.googleVerification =

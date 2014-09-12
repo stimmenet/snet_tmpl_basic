@@ -19,12 +19,6 @@ page {
 
             content-complement <  styles.content.get
             content-complement.select.where = colPos = 3
-
-            # content-highlight <  styles.content.get
-            # content-highlight.select.where = colPos = X
-
-            # content-additional <  styles.content.get
-            # content-additional.select.where = colPos = X
 		}
 	}
 }
