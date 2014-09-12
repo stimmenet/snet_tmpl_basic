@@ -10,9 +10,9 @@ module.exports = function(grunt) {
 				files: [
                     {
                         expand: true,
-                        cwd: 'Resources/Public/Styles/sass/',
+                        cwd: 'Resources/Public/Styles/src/',
                         src: ['_pages/**/*.scss', '_sections/**/*.scss', '_vendor/**/*.scss'],
-                        dest: 'Resources/Public/Styles/css/',
+                        dest: 'Resources/Public/Styles/dist/',
                         ext: '.css',
                         rename: function(dest, src) {
                           src = src.replace(/^_/, '');
@@ -30,9 +30,9 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'Resources/Public/Styles/css/',
+                        cwd: 'Resources/Public/Styles/dist/',
                         src: ['pages/**/*.css', 'sections/**/*.css', 'vendor/**/*.css'],
-                        dest: 'Resources/Public/Styles/css/'
+                        dest: 'Resources/Public/Styles/dist/'
                     }
                 ]
             }
@@ -45,9 +45,9 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'Resources/Public/Styles/css/',
+                        cwd: 'Resources/Public/Styles/dist/',
                         src: ['**/*.css'],
-                        dest: 'Resources/Public/Styles/css/',
+                        dest: 'Resources/Public/Styles/dist/',
                         ext: '.css'
                     }
                 ]
