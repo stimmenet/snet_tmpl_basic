@@ -7,6 +7,7 @@ page {
 
 	includeJS {
 		headjs = //cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js
+		headjs.external = 1
 		## Pathname Helper Values and function
 		headjs.allWrap = <script>if(!window.snet){window.snet = {};}snet.resolveExtPath=function(path){return path.replace('EXT:','/typo3conf/ext/');};snet.jsRootPath=snet.resolveExtPath('{$snet_tmpl_basic.jsRootPath}');snet.cssRootPath=snet.resolveExtPath('{$snet_tmpl_basic.cssRootPath}');</script> |
 		scriptloader = {$snet_tmpl_basic.jsRootPath}/scriptloader.js
