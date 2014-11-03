@@ -1,4 +1,4 @@
-# Regeln für snet_feBaseline #
+# Regeln für snet_feBaseline / snet_tmpl_basic #
 
 ## Ordnerstruktur ##
 

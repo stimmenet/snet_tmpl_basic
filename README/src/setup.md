@@ -1,4 +1,4 @@
-# SNET FE Baseline 2.0
+﻿# SNET FE Baseline 2.0 / snet_tmpl_basic
 > A new frontend development workflow built on node.js, grunt and sass
 
 ## One-Time Installation

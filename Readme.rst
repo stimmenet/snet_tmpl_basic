@@ -1,5 +1,5 @@
 VORGABEN snet_tmpl_basic
-=================
+========================
 
 [SNET-intern]
 
@@ -11,7 +11,7 @@ VORGABEN snet_tmpl_basic
 [/SNET-intern]
 
 
-* Wenn die Startseite nicht im Hauptmenü, sondern nur im Metamenü auftaucht, wird diese trotzdem direkt im Hautpmenü als erste Seite angelegt und auf "im Menü verbergen" gesetzt. Somit haben wir immer /start.html anstelle von /meta/start.html Achtung: Hier ggf. nochmals Änderung vornehmen wegen default-Seite als Verweis!
+* Root-Seite = Startseite
 * Seiten unterhalb von Funktionsseite werden im Normalfall aus Indizierung und von RealURL ausgeschlossen. Ausnahmen: 404 Seite muss für RealURL konfiguriert sein. Evt. weitere Seiten wenn diese eine spezielle Aufgabe übernehmen
 
 * Struktur TypoScript->Extensions->[ext_key]->[ext_key].ts + evt. [ext_key.constants.ts]
@@ -26,12 +26,12 @@ VORGABEN snet_tmpl_basic
 
 * lib-Objekte werden über variables an Fluid übergeben
 
-* Typoscript-Objekte (Snippets) in page.0.ts erzeugen und dann über variables an Fluid übergeben
+* Typoscript-Objekte (Snippets) in page.typeNum.0.ts erzeugen und dann über variables an Fluid übergeben
 
 * RealURL-Konfiguration befindet sich in der ext_localconf.php in der snet_tmpl_basic
 
 * Alle Conditions befinden sich in der Datei conditions.ts und werden dort sinnvoll in Blöcke (includes, templates, extensions) unterteilt.
-* Typoscript für bestimmte/mehrere Seiten werden in der consitions.ts in einem entsprechendwn Block (includes) eingebunden
+* Typoscript für bestimmte/mehrere Seiten werden in der consitions.ts in einem entsprechenden Block (includes) eingebunden
 
 * Pfade werden immer über Konstanten verwendet, diese liegen dann zentral in constants.ts
 

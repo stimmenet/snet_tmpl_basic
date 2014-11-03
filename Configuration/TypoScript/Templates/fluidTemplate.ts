@@ -1,7 +1,7 @@
 page {
 	10 = FLUIDTEMPLATE
 	10 {
-	 	file = {$snet_tmpl_basic.templateRootPath}/Pages/fluidTemplate.html
+	 	file = {$snet_tmpl_basic.templateRootPath}/Pages/defaultTemplate.html
 		layoutRootPath = {$snet_tmpl_basic.layoutRootPath}/
 		partialRootPath = {$snet_tmpl_basic.partialRootPath}/
 
