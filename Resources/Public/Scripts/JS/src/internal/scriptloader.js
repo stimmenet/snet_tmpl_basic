@@ -35,5 +35,10 @@ head.ready(document, function(){
                 });
             });
         }
+        if (jQuery('.csc-mailform').length > 0) {
+            head.load([
+                snet.cssRootPath + '/sections/form.css'
+            ]);
+        }
     });
 });

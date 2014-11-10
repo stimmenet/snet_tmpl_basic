@@ -6,6 +6,9 @@
 ### Buttons fuer den RTE ###
 options.RTEkeyList=class,formatblock,bold,italic,orderedlist,unorderedlist,outdent,indent,insertcharacter,link,findreplace,removeformat,undo,redo
 
+options.RTEkeyList := addToList(subscript)
+options.RTEkeyList := addToList(superscript)
+
 ### Feld "Alias" ausblenden ###
 page.TCEFORM.pages.alias.disabled = 1
 

@@ -41,6 +41,37 @@ h1, h2, h3, h4, h5, h6 {
     margin:$width-margin 0;
 }
 
+// Form elements
+input[type=text],
+input[type=submit],
+input[type=email],
+input[type=password],
+input[type=date],
+textarea,
+select {
+    border:0;
+    background:$color-frugal;
+    padding:10px;
+    margin-bottom:15px;
+    width:100%;
+    box-sizing:border-box;
+}
+
+input[type=submit] {
+    background:$color-highlight;
+    color:$color-minor;
+    text-transform:uppercase;
+    padding:10px 15px;
+    width:auto;
+    margin-bottom:30px;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type=submit]:hover {
+    background-color:$color-frugal;
+    color:$color-main;
+}
+
 .col { float: left; }
 .column-3cols { overflow: auto; }
 .column-3cols .col { width: 30%; }
