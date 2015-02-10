@@ -9,8 +9,8 @@ snet_tmpl_basic {
 		# cat=SNET Basic Template/basic/001; type=string; label= SiteName
 		siteName = SNET TYPO3 Mogg
 
-		# cat=SNET Basic Template/basic/002; type=string; label= BaseUrl: URL nach(!) Onlinegang ohne "http://www" und ohne / am Ende - also domain.tld oder sublevel.domain.tld.
-		baseUrl = mogg.local
+		# cat=SNET Basic Template/basic/002; type=string; label= baseURL: URL nach(!) Onlinegang ohne "http://www" und ohne / am Ende - also domain.tld oder sublevel.domain.tld.
+		baseURL = mogg.local
 
 		# cat=SNET Basic Template/basic/003; type=string; label= Mittwald pNummer: pXXXXXX inkl. p am Anfang
 		pnummer = p191349

@@ -1,18 +1,18 @@
-### BaseUrl Verwaltung
+### baseURL Verwaltung
 #Default: Take the value from config
-config.baseUrl = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_basic.config.baseUrl}/
-config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_basic.config.baseUrl}/
+config.baseURL = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_basic.config.baseURL}/
+config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_basic.config.baseURL}/
 
 #ssl: prepend {$snet_tmpl_basic.protocol.prefix.secure}
 
 [globalString = _SERVER|HTTPS=on]
-	config.baseUrl = {$snet_tmpl_basic.protocol.prefix.secure}{$snet_tmpl_basic.config.baseUrl}/
-	config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.secure}{$snet_tmpl_basic.config.baseUrl}/
+	config.baseURL = {$snet_tmpl_basic.protocol.prefix.secure}{$snet_tmpl_basic.config.baseURL}/
+	config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.secure}{$snet_tmpl_basic.config.baseURL}/
 [global]
 
 #Mittwald: Build the pnumber url from config - no https for pnumber
 [globalString = IENV:HTTP_HOST = {$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}]
-    config.baseUrl = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}/
+    config.baseURL = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}/
     config.absRefPrefix = {$snet_tmpl_basic.protocol.prefix.unsecure}{$snet_tmpl_basic.config.pnummer}.{$snet_tmpl_basic.helper.mwUrlString}/
 [global]
 [globalString = IENV:HTTP_HOST = mogg.local]

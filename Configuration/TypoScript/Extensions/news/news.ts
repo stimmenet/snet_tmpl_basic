@@ -34,7 +34,7 @@ plugin.tx_news {
 					language < config.locale_all
 					copyright = {$snet_tmpl_basic.meta.authorCompany}
 					generator = {$snet_tmpl_basic.meta.authorCompany}
-					link < config.baseUrl
+					link < config.baseURL
 					category = {$glb.lang.news.rss.category}
 				}
 			}
