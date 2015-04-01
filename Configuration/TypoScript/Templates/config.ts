@@ -88,6 +88,13 @@ Die Internetagentur - TYPO3 Websites für Heilbronn, Hohenlohe, Kraichgau
 	###############
 	sys_language_mode = strict
 
+	### CSS Compression & Concatenation ###
+	concatenateCss = {$snet_tmpl_basic.config.cssCnC}
+	compressCss = {$snet_tmpl_basic.config.cssCnC}
+
+	### JS Compression & Concatenation ###
+	concatenateJs = {$snet_tmpl_basic.config.jsCnC}
+	compressJs = {$snet_tmpl_basic.config.jsCnC}
 }
 
 ### XHTML Prolog   ###
@@ -111,3 +118,4 @@ Die Internetagentur - TYPO3 Websites für Heilbronn, Hohenlohe, Kraichgau
     config.locale_all = en_EN
     config.htmlTag_setParams = lang="en"
 [global]
+

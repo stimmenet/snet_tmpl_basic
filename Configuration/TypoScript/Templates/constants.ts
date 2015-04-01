@@ -30,6 +30,12 @@ snet_tmpl_basic {
 
 		# cat=SNET Basic Template/basic/007; type=boolean; label= Admin-Panel: CAdmin-Panel im FE aktivieren - default Off
 		admPanel = 0
+
+		# cat=SNET Basic Template/basic/008; type=boolean; label= Enable CSS compression and Concatenation: default Off
+		cssCnC = 0
+
+		# cat=SNET Basic Template/basic/009; type=boolean; label= Enable JS compression and Concatenation: default Off
+		jsCnC = 0
 	}
 
 	# customsubcategory=meta=Meta Settings

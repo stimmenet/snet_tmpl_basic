@@ -100,4 +100,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['realurl'] = array (
 	),
 
 );
+
+$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel'] = 9;
+$GLOBALS['TYPO3_CONF_VARS']['BE']['compressionLevel'] = 9;
 ?>
