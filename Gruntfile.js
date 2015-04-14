@@ -3,7 +3,6 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
 			options: {
-				sourcemap : true,
                 loadPath: require('node-neat').includePaths
      		},
 			dist: {
@@ -140,5 +139,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-delete-sync');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.registerTask('default',['watch']);
+    grunt.registerTask('default',['watch']);
+    grunt.registerTask('css',['sass', 'autoprefixer', 'csswring']);
+    grunt.registerTask('js',['jshint', 'uglify']);
+    grunt.registerTask('img',['newer:image:dynamic', 'delete_sync']);
+    grunt.registerTask('md',['newer:markdown:all']);
+	grunt.registerTask('all',['sass', 'autoprefixer', 'csswring', 'jshint', 'uglify', 'image:dynamic', 'delete_sync', 'markdown:all']);
 }
