@@ -1,6 +1,15 @@
-### Headergrafik ###
+### Logo ###
 
-# Variante als CSS-Hintergrundbild
+lib.logo = IMAGE
+lib.logo {
+      file = {$snet_tmpl_basic.imgRootPath}/logo.png
+      altText = zur Startseite
+      titleText = zur Startseite
+      stdWrap.typolink.parameter = {$snet_tmpl_basic.pid.rootPage}
+}
+
+### Headerimage als CSS-Hintergrundbild ###
+
 lib.headerImageCSS = COA
 lib.headerImageCSS {
       10 = TEXT
@@ -19,7 +28,8 @@ lib.headerImageCSS {
       30.value = </style>
 }
 
-# Variante als IMG
+### Headerimage als <img> ###
+
 lib.headerImage = IMAGE
 lib.headerImage {
 	file {

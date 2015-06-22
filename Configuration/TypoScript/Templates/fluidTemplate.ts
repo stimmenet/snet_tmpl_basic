@@ -13,6 +13,7 @@ page {
 			IE6advice < lib.oldIE
 			footer < lib.footer
 			header_img < lib.headerImage
+			logo < lib.logo
 
 			content-main <  styles.content.get
             content-main.select.where = colPos = 0
