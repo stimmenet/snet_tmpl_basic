@@ -33,6 +33,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'extbase' => '6.2',
 			'fluid' => '6.2',
 			'typo3' => '6.2',
+			'version' => '6.2',
 			'additional_reports' => '2.6.9',
 			'fl_seo_sitemap' => '0.2.1',
 			'gridelements' => '3.0.0',
