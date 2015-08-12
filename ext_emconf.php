@@ -13,7 +13,7 @@
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'SNET Basic Template',
 	'description' => 'The Basic Template Extension for TYPO3 sites made by STIMME.NET',
-	'category' => 'plugin',
+	'category' => 'distribution',
 	'author' => 'Andreas Beyl',
 	'author_email' => 'beyl@stimme.net',
 	'author_company' => 'STIMME.NET - Heilbronner Stimme GmbH und Co. KG',
