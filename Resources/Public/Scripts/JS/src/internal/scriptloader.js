@@ -10,10 +10,20 @@ if (head.browser.ie && head.browser.version < 9) {
     ]);
 }
 
+// If jQuery was already executed, it should not be loaded a second time asynchronously.
+// But to make sure the functionality of head.js is not broken in that case,
+// a quasi empty file is loaded, so that the head.ready(["jquery"]) call still works
+if (!window.jQuery) {
+    var jQuerySrc = '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js';
+}
+else {
+    var jQuerySrc = snet.jsRootPath + '/jqueryAlreadyLoaded.js';
+}
+
 // Load as soon as possible and execute in order
 head.load([
     // jQuery / Javascript library / <http://jquery.com/>
-    { jquery:       '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' },
+    { jquery:       jQuerySrc },
     // Modernizr / Javascript feature detection / development use only, for production use a custom build / <http://modernizr.com/>
     { modernizr:    '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js' },
     // MediaCheck / run code on entry and exit from media queries / use only if website has responsive styles / <https://github.com/sparkbox/mediaCheck>
