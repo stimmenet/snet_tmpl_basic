@@ -96,20 +96,6 @@ module.exports = function(grunt) {
                 syncWith: 'Resources/Public/Images/src/'
             }
         },
-        markdown: {
-            all: {
-                files: [{
-                    expand: true,
-                    src: 'README/src/*.md',
-                    dest: 'README/',
-                    flatten: true,
-                    ext: '.html'
-                }],
-                options: {
-                    template: 'README/src/template.html'
-                }
-            }
-        },
 		watch: {
 			css: {
                 files: '**/*.scss',
@@ -131,7 +117,6 @@ module.exports = function(grunt) {
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-markdown');
     grunt.loadNpmTasks('grunt-csswring');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-image');
@@ -143,6 +128,5 @@ module.exports = function(grunt) {
     grunt.registerTask('css',['sass', 'autoprefixer', 'csswring']);
     grunt.registerTask('js',['jshint', 'uglify']);
     grunt.registerTask('img',['newer:image:dynamic', 'delete_sync']);
-    grunt.registerTask('md',['newer:markdown:all']);
-	grunt.registerTask('all',['sass', 'autoprefixer', 'csswring', 'jshint', 'uglify', 'image:dynamic', 'delete_sync', 'markdown:all']);
+	grunt.registerTask('all',['sass', 'autoprefixer', 'csswring', 'jshint', 'uglify', 'image:dynamic', 'delete_sync']);
 }

@@ -1,0 +1,31 @@
+// /*
+// ******************************
+//  | - Global Styles
+// ******************************
+// */
+
+
+// Textstile
+
+.important {
+  color:$color-highlight;
+  font-style:italic;
+}
+
+
+// Blockstile
+
+p.csc-frame-frame2 {
+  border:1px solid $color-main;
+  background:yellow;
+  padding:15px;
+}
+
+
+// Rahmenstile
+
+div.csc-frame-frame1 {
+  background:$color-highlight;
+  color:$color-minor;
+  padding:15px;
+}

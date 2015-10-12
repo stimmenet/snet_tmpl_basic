@@ -1,0 +1,103 @@
+// /*
+// ******************************
+//  | - Uploads Styles
+// ******************************
+// */
+
+.csc-uploads {
+  margin:30px 0 45px;
+  padding:0;
+  list-style-type:none;
+}
+
+.csc-uploads .csc-uploads-element {
+	padding:0;
+	overflow:auto;
+	margin:25px 0;
+
+	&:before {
+		content:none;
+	}
+}
+
+.csc-uploads-element > a {
+  display:block;
+  margin-right:10px;
+  float:left;
+  width:55px;
+  height:55px;
+  position: relative;
+  z-index:8;
+  margin-top:4px;
+  background:url('../../../Images/dist/file-icons.png') no-repeat 0 0;
+  font-size:0; 
+}
+
+.csc-uploads-1 .csc-uploads-element-pdf > a  {
+  background:url('../../../Images/dist/file-icons.png') no-repeat 0 -115px;
+}
+
+.csc-uploads-2 .csc-uploads-element-pdf > a,
+.csc-uploads-2 .csc-uploads-element-jpg > a {
+  width:80px;
+  height:auto;
+  background:none;
+}
+
+.csc-uploads-element-xls > a  {
+  background:url('../../../Images/dist/file-icons.png') no-repeat 0 -285px;
+}
+
+.csc-uploads-element-ppt > a  {
+  background:url('../../../Images/dist/file-icons.png') no-repeat 0 -228px;
+}
+
+.csc-uploads-element-doc > a  {
+  background:url('../../../Images/dist/file-icons.png') no-repeat 0 -172px;
+}
+
+.csc-uploads-element-jpg > a  {
+  background:url('../../../Images/dist/file-icons.png') no-repeat 0 -58px;
+}
+
+.csc-uploads-element-zip > a  {
+  background:url('../../../Images/dist/file-icons.png') no-repeat 0 -400px;
+}
+
+.csc-uploads-element-txt > a  {
+  background:url('../../../Images/dist/file-icons.png') no-repeat 0 -342px;
+}
+
+.csc-uploads-2 .csc-uploads-element a + a {
+  display:none;
+}
+
+.csc-uploads-1 .csc-uploads-element > a > img {
+  display:none;
+}
+
+.csc-uploads-fileName a {
+  font-style:italic;
+}
+
+ul.csc-uploads span.csc-uploads-fileName {
+  text-decoration:none;
+}
+
+ul.csc-uploads span.csc-uploads-description {
+  display:block;
+  padding-left:65px;
+
+  a {
+    color:$color-main;
+  }
+}
+
+ul.csc-uploads span.csc-uploads-fileSize {
+  display:block;
+  padding-left:65px;
+  
+  a {
+    color:$color-main;
+  }
+}
