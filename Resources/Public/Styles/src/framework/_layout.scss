@@ -8,6 +8,14 @@
 .page {
     width:$width-total;
     margin:$width-margin auto;
+
+    @include mq($mq-singlecol) {
+        width:$width-leftcol;
+    }
+
+    @include mq($mq-tablet) {
+        width:auto;
+    }
 }
 
 .content {
@@ -16,8 +24,20 @@
 
 .content-main {
     @include span-columns($columns-main);
+
+    @include mq($mq-singlecol) {
+        width:auto;
+        float:none;
+        margin:0;
+    }
 }
 
 .content-complement {
     @include span-columns($columns-complement);
+
+    @include mq($mq-singlecol) {
+        width:auto;
+        float:none;
+        margin:0;
+    }
 }

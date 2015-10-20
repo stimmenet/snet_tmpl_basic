@@ -39,10 +39,20 @@
     position:absolute;
     right:$width-margin;
     top:$width-margin;
+
+    @include mq($mq-mobile) {
+        position:static;
+        text-align:center;
+    }
 }
 
 .nav--meta .nav-list-item {
     padding-bottom:6px;
+
+    @include mq($mq-mobile) {
+        display:inline-block;
+        float:none;
+    }
 }
 
 .nav--meta .nav-list-item a {
@@ -67,11 +77,20 @@
 
 .nav--main {
     background:$color-main;
+
+    @include mq($mq-tablet) {
+        text-align:center;
+    }
 }
 
 .nav--main .nav-list-item {
     &:before {
         display:none;
+    }
+
+    @include mq($mq-tablet) {
+        display:inline;
+        float:none;
     }
 }
 
@@ -82,6 +101,13 @@
     text-decoration:none;
     border-bottom:5px solid transparent;
     margin:0 5px;
+
+    @include mq($mq-tablet) {
+        display:inline-block;
+        padding:0;
+        border-bottom:none;
+        margin:$width-margin / 2;
+    }
 
     &:hover {
         color:$color-minor;

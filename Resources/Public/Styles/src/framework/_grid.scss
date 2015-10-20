@@ -29,9 +29,21 @@ $columns-complement: 6;
 
 .demogrid-column--main {
     @include span-columns(14 of $columns-main);
+
+    @include mq($mq-mobile) {
+        width:auto;
+        float:none;
+        margin:0;
+    }
 }
 
 .demogrid-column--aside {
     @include span-columns(4 of $columns-main);
+
+    @include mq($mq-mobile) {
+        width:auto;
+        float:none;
+        margin:0;
+    }
 }
 

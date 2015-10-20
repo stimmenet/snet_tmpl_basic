@@ -2,7 +2,7 @@
 
 lib.logo = IMAGE
 lib.logo {
-      file = {$snet_tmpl_basic.imgRootPath}/logo.png
+      # file = {$snet_tmpl_basic.imgRootPath}/logo.png
       altText = zur Startseite
       titleText = zur Startseite
       stdWrap.typolink.parameter = {$snet_tmpl_basic.pid.rootPage}

@@ -52,6 +52,11 @@ h3 {
     font-size:$fontsize-l;
 }
 
+img {
+    max-width:100%;
+    height:auto;
+}
+
 // Form elements
 input[type=text],
 input[type=submit],
@@ -85,11 +90,11 @@ input[type=submit]:hover {
 
 table {
   width:100%;
-  
+
   th {
     background:$color-frugal;
   }
-  
+
   th, td {
     text-align:left;
     border:1px solid $color-frugal;

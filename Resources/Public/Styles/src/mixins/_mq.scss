@@ -5,6 +5,10 @@
 // ******************************
 // */
 
+$mq-singlecol: 'max-width: 1200px';
+$mq-tablet: 'max-width: 920px';
+$mq-mobile: 'max-width: 640px';
+
 @mixin mq($breakpoint) {
     @media screen and ($breakpoint) { @content }
 }

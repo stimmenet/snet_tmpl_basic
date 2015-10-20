@@ -16,4 +16,10 @@
     @include font-size($fontsize-xl, $fontsize-base);
     position:absolute;
     bottom:0;
+
+    @include mq($mq-mobile) {
+        position:static;
+        text-align:center;
+        margin-top:0;
+    }
 }
