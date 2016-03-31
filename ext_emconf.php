@@ -33,14 +33,11 @@ $EM_CONF[$_EXTKEY] = array(
 			'extbase' => '6.2',
 			'fluid' => '6.2',
 			'typo3' => '6.2',
-			'version' => '6.2',
+			'version' => '7.6',
 			'additional_reports' => '2.6.9',
-			'fl_seo_sitemap' => '0.2.1',
 			'gridelements' => '3.0.0',
 			'news' => '3.0.1',
 			'realurl' => '1.12.8',
-			'metaseo' => '1.0.2',
-			'wt_spamshield' => '1.2.1'
 		),
 		'conflicts' => array(
 		),
