@@ -6,8 +6,7 @@ page {
 	includeCSS.styles = {$snet_tmpl_basic.cssRootPath}/pages/main.css
 
 	includeJS {
-		headjs = //cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js
-		headjs.external = 1
+		headjs = {$snet_tmpl_basic.jsRootPath}/head.js
 		headjs.excludeFromConcatenation = 1
 		headjs.disableCompression = 1
 		headjs.forceOnTop = 1
