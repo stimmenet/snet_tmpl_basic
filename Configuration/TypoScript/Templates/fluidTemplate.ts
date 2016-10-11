@@ -21,6 +21,10 @@ page {
             content-complement <  styles.content.get
             content-complement.select.where = colPos = 3
 		}
+
+		settings {
+			analyticsProperty = {$snet_tmpl_basic.misc.analyticsProperty}
+		}
 	}
 }
 

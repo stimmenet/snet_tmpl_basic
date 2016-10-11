@@ -40,8 +40,14 @@ snet_tmpl_basic {
 
 	# customsubcategory=meta=Meta Settings
 	meta {
-		# cat=SNET Basic Template/meta/001; type=sting; label= Google Webmastercode
+		# cat=SNET Basic Template/meta/001; type=string; label= Google Webmastercode
 		googleWebmastercode =
+	}
+
+	# customsubcategory=misc=Other Settings
+	misc {
+		# cat=SNET Basic Template/misc/001; type=string; label= Analytics Property (z.B. Google Analytics)
+		analyticsProperty =
 	}
 
 	# cat=SNET Basic Template/dims/002; type=int+; label= Maximale Headerbreite
