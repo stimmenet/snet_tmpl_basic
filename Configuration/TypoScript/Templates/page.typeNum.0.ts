@@ -22,4 +22,23 @@ page {
 	headerData.12 = TEXT
 	headerData.12.value = <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	### canonical tag ###
+	headerData.19 = TEXT
+	headerData.19 {
+	    # Aktuelle Seite
+	    typolink.parameter.data = TSFE:id
+	    # Gib nur die URL zurück
+	    typolink.returnLast = url
+	    # Erstelle eine absolute URL
+	    typolink.forceAbsoluteUrl = 1
+	    # Fügt alle GET-Parameter hinzu, wie z.B. tt_news, L und auch cHash
+	    typolink.addQueryString = 1
+	    typolink.addQueryString.method = GET
+	    # Schliesst bestimmte Parameter aus, z.B. cHash oder auch backPid von tt_news
+	    typolink.addQueryString.exclude = cHash,backPid,tx_news_pi1[overwriteDemand][categories],tx_form_form[action]
+	    # Wrappen und mit dem richtigen Tag einbinden.
+	    # Das Leerzeichen nach dem öffnenden Tag bitte entfernen
+	    wrap = <link rel="canonical" href="|" />
+	}
+
 }

@@ -20,6 +20,9 @@ plugin.metaseo {
     # cat=plugin.metaseo.metaTags/enable/28; type=boolean; label= Meta Description: Enable Dublin Core (DC.) metatags
   metaTags.enableDC  = 0
 
+  # cat=plugin.metaseo.metaTags/enable/22; type=boolean; label= Canonical Tag: Autogenerate Canonical-Metatag if possible.
+  metaTags.canonicalUrl = 0
+
   ### removed due to w3c-standards
     # cat=plugin.metaseo.metaTags/page/03; type=string; label= Meta Copyright info: Copyright information (eg. "Me Myself and I, %YEAR%. All rights reserved.", %YEAR% will be substituted with the current year).
   metaTags.copyright =
