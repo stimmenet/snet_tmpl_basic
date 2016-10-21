@@ -1,9 +1,47 @@
+lib.templateName = COA
+lib.templateName {
+	10 = TEXT
+	10 {
+		cObject = TEXT
+		cObject {
+			data = levelfield:-1, backend_layout_next_level, slide
+			override.field = backend_layout
+			required = 1
+			stdWrap.replacement {
+				10 {
+					search = pagets__
+					replace =
+				}
+				20 {
+					search = #^snettmpl\w+_(.*)$#i
+					replace = \1
+					useRegExp = 1
+				}
+			}
+		}
+		ifEmpty = Default
+		case = ucfirst
+	}
+
+	20 < .10
+	20.case = lower
+}
+
 page {
 	10 = FLUIDTEMPLATE
 	10 {
-	 	file = {$snet_tmpl_basic.templateRootPath}/Pages/DefaultTemplate.html
-		layoutRootPath = {$snet_tmpl_basic.layoutRootPath}/
-		partialRootPath = {$snet_tmpl_basic.partialRootPath}/
+
+		templateName < lib.templateName.10
+
+	 	templateRootPaths  {
+	 		10 = {$snet_tmpl_basic.templateRootPath}/Pages/
+	 	}
+		layoutRootPaths {
+			10 = {$snet_tmpl_basic.layoutRootPath}/
+		}
+		partialRootPaths {
+			10 = {$snet_tmpl_basic.partialRootPath}/
+		}
 
 		variables {
 			metanav < lib.menuMeta
@@ -14,6 +52,7 @@ page {
 			footer < lib.footer
 			header_img < lib.headerImage
 			logo < lib.logo
+			templateName < lib.templateName.20
 
 			content-main <  styles.content.get
             content-main.select.where = colPos = 0

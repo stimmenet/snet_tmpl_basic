@@ -1,6 +1,6 @@
 <f:format.html parseFuncTSPath="">{IE6advice}</f:format.html>
 
-<div class="page">
+<div class="page page--{templateName}">
     <header class="header">
         <h1>SNET Basictemplate</h1>
         <f:format.html parseFuncTSPath="">{headerImage}</f:format.html>
@@ -10,21 +10,7 @@
     <nav class="nav nav--breadcrumb"><f:format.html parseFuncTSPath="">{breadcrumb}</f:format.html></nav>
 
     <div class="content">
-
-        <div class="content-main">
-            <!--TYPO3SEARCH_begin-->
-            <f:format.html parseFuncTSPath="">{content-main}</f:format.html>
-            <!--TYPO3SEARCH_end-->
-            <div class="demogrid">
-                <div class="demogrid-column demogrid-column--main">Subcontent Big</div>
-                <div class="demogrid-column demogrid-column--aside">Subcontent Small</div>
-            </div>
-        </div>
-
-        <aside class="content-complement">
-            <f:format.html parseFuncTSPath="">{content-complement}</f:format.html>
-        </aside>
-
+        <f:render section="content" />
     </div>
 
     <footer class="footer"><f:format.html parseFuncTSPath="">{footer}</f:format.html></footer>

@@ -62,5 +62,60 @@ TCEFORM.tt_content.multimedia.config.max_size = 20480
 TCEFORM.tt_content.multimedia.config.maxitems = 100
 
 ### Quelle fuer Backend-Layouts festlegen
-TCEFORM.pages.backend_layout.PAGE_TSCONFIG_ID = 16
-TCEFORM.pages.backend_layout_next_level.PAGE_TSCONFIG_ID = 16
+#TCEFORM.pages.backend_layout.PAGE_TSCONFIG_ID = 16
+#TCEFORM.pages.backend_layout_next_level.PAGE_TSCONFIG_ID = 16
+
+################################
+#######  BACKENDLAYOUTS  #######
+################################
+mod {
+    web_layout {
+        BackendLayouts {
+        	### EINSPALTIG (DEFAULT)
+            snettmplbasic_default {
+                title = Einspaltig (Standard)
+                config {
+                    backend_layout {
+					    colCount = 1
+					    rowCount = 1
+					    rows {
+					        1 {
+					            columns {
+					                1 {
+					                    name = Inhalt
+					                    colPos = 0
+					                }
+					            }
+					        }
+					    }
+					}
+                }
+            }
+            ### ZWEISPALTIG
+            snettmplbasic_twocol {
+                title = Zweispaltig
+                config {
+					backend_layout {
+					    colCount = 3
+					    rowCount = 1
+					    rows {
+					        1 {
+					            columns {
+					                1 {
+					                    name = Inhalt
+					                    colspan = 2
+					                    colPos = 0
+					                }
+					                2 {
+					                    name = Rand
+					                    colPos = 3
+					                }
+					            }
+					        }
+					    }
+					}
+                }
+            }
+        }
+    }
+}

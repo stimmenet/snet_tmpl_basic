@@ -22,22 +22,25 @@
     @include clearfix;
 }
 
-.content-main {
-    @include span-columns($columns-main);
 
-    @include mq($mq-singlecol) {
-        width:auto;
-        float:none;
-        margin:0;
+.page--twocol {
+    .content-main {
+        @include span-columns($columns-main);
+
+        @include mq($mq-singlecol) {
+            width:auto;
+            float:none;
+            margin:0;
+        }
     }
-}
 
-.content-complement {
-    @include span-columns($columns-complement);
+    .content-complement {
+        @include span-columns($columns-complement);
 
-    @include mq($mq-singlecol) {
-        width:auto;
-        float:none;
-        margin:0;
+        @include mq($mq-singlecol) {
+            width:auto;
+            float:none;
+            margin:0;
+        }
     }
 }
