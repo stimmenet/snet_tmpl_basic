@@ -1,36 +1,19 @@
-tt_content.gridelements_pi1.10 = < lib.stdheader
+#tt_content.gridelements_pi1.10 = < lib.stdheader
 
 tt_content.gridelements_pi1.20.10.setup {
-	1 < lib.gridelements.defaultGridSetup
-	1 {
-		columns {
-
-			10 < .default
-			10.wrap = <div class="col col1">|</div>
-
-			20 < .default
-			20.wrap = <div class="col col2">|</div>
-			
-		}
-		wrap = <div class="column-2cols">|</div>
+	snettmplbasic_twocol < lib.gridelements.defaultGridSetup
+	snettmplbasic_twocol {
+		cObject = FLUIDTEMPLATE
+		cObject.file = {$snet_tmpl_basic.templateRootPath}/Extensions/Gridelements/TwoCol.html
+		cObject.variables.headline < lib.stdheader
 	}
 }
 
 tt_content.gridelements_pi1.20.10.setup {
-	2 < lib.gridelements.defaultGridSetup
-	2 {
-		columns {
-
-			10 < .default
-			10.wrap = <div class="col col1">|</div>
-
-			20 < .default
-			20.wrap = <div class="col col2">|</div>
-			
-			30 < .default
-			30.wrap = <div class="col col3">|</div>
-			
-		}
-		wrap = <div class="column-3cols">|</div>
+	snettmplbasic_threecol < lib.gridelements.defaultGridSetup
+	snettmplbasic_threecol {
+		cObject = FLUIDTEMPLATE
+		cObject.file = {$snet_tmpl_basic.templateRootPath}/Extensions/Gridelements/ThreeCol.html
+		cObject.variables.headline < lib.stdheader
 	}
 }

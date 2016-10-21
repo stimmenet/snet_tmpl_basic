@@ -119,3 +119,60 @@ mod {
         }
     }
 }
+
+
+################################
+#######   GRIDELEMENTS   #######
+################################
+tx_gridelements.setup {
+	### Zweispaltig 1-1
+	snettmplbasic_twocol {
+		title = Zweispaltig
+		description = 1-1
+		config {
+			colCount = 2
+			rowCount = 1
+			rows {
+				1 {
+					columns {
+						1 {
+							name = Spalte 1
+							colPos = 10
+						}
+						2 {
+							name = Spalte 2
+							colPos = 20
+						}
+					}
+				}
+			}
+		}
+	}
+	### Dreispaltig 1-1-1
+	snettmplbasic_threecol {
+		title = Dreispaltig
+		description = 1-1-1
+		config {
+			colCount = 3
+			rowCount = 1
+			rows {
+				1 {
+					columns {
+						1 {
+							name = Spalte 1
+							colPos = 10
+						}
+						2 {
+							name = Spalte 2
+							colPos = 20
+						}
+						3 {
+							name = Spalte 3
+							colPos = 30
+						}
+					}
+				}
+			}
+		}
+	}
+}
